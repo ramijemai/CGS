@@ -1,0 +1,3 @@
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/BunkerProject.dir
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/rebuild_cache.dir
