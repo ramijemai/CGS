@@ -4,7 +4,7 @@
 RecoveryService::RecoveryService(CapacityEngine& capacityEngine)
     : m_capacityEngine(capacityEngine) {}
 
-bool RecoveryService::executeRecoveryAndDocking(std::shared_ptr<Drone> returningDrone) {
+bool RecoveryService::executeRecoveryAndDocking(std::shared_ptr<Drone> returningDrone, const Bunker& bunker) {
     if (!returningDrone) {
         std::cerr << "[RECOVERY ERROR] Null drone reference passed for recovery.\n";
         return false;
@@ -17,6 +17,11 @@ bool RecoveryService::executeRecoveryAndDocking(std::shared_ptr<Drone> returning
     std::cout << "[RECOVERY] Drone '" << returningDrone->getId() 
               << "' initiating RTL (Battery: " 
               << returningDrone->getBatteryLevel() << "%)...\n";
+
+    const auto& bunkerLocation = bunker.getGpsLocation();
+    std::cout << "[RECOVERY] Return target set to bunker GPS ("
+              << bunkerLocation.latitude << ", " << bunkerLocation.longitude
+              << ", " << bunkerLocation.altitude << "m).\n";
     
     returningDrone->setState(DroneState::ReturningToBunker);
 

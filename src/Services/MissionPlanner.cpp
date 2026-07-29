@@ -15,7 +15,13 @@ bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target, doubl
         return false;
     }
 
-    auto drone = slot->getDrone();
+    // Undock the drone — takes ownership out of the slot
+    auto drone = slot->undockDrone();
+    if (!drone) {
+        std::cerr << "[MISSION PLANNER ERROR] Failed to undock drone from Bay " << slot->getSlotId() << ".\n";
+        return false;
+    }
+
     std::cout << "[MISSION PLANNER] Selected Asset: '" << drone->getId() 
               << "' in Bay " << slot->getSlotId() 
               << " (Battery: " << drone->getBatteryLevel() << "%)\n";
@@ -28,7 +34,6 @@ bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target, doubl
     std::cout << "[MISSION PLANNER] Pre-flight diagnostics PASSED. Systems NOMINAL.\n";
 
     drone->setState(DroneState::InFlight);
-    m_capacityEngine.getSlot(slot->getSlotId())->undockDrone();
 
     std::cout << "[MISSION PLANNER] Drone dispatched to Target GPS (" 
               << target.latitude << ", " << target.longitude 

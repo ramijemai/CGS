@@ -17,6 +17,15 @@ void Drone::setBatteryLevel(double level) {
     m_batteryLevel = std::clamp(level, 0.0, 100.0);
 }
 
+const GpsCoordinate& Drone::getCurrentLocation() const {
+    return m_currentLocation;
+}
+
+
+void Drone::setCurrentLocation(const GpsCoordinate& location) {
+    m_currentLocation = location;
+}
+
 DroneState Drone::getState() const {
     return m_state;
 }

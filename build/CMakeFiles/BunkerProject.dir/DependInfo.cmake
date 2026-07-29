@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp" "CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o.d"
+  "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp" "CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o.d"
   "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/BaySlot.cpp" "CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o.d"
+  "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp" "CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o.d"
   "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Drone.cpp" "CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o.d"
   "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/CapacityEngine.cpp" "CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o.d"
   "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/MissionPlanner.cpp" "CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o" "gcc" "CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o.d"

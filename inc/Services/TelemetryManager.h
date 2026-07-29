@@ -75,11 +75,18 @@ public:
     // Get count of active drones
     int getActiveDroneCount() const;
 
+    // Get command history for dashboard display
+    std::vector<TelemetryMessage> getCommandHistory() const;
+
     // Simulate drone flight (update positions over time)
     void simulateDroneFlight(const std::string& droneId, const GpsCoordinate& target, double flightTime);
 
 private:
+    static constexpr size_t kMaxHistory = 1000;
+
     std::map<std::string, DroneTelemetry> m_activeDrones;
     std::vector<TelemetryMessage> m_commandHistory;
     std::vector<DroneTelemetry> m_telemetryHistory;
+
+    void trimHistory();
 };

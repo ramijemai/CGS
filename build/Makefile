@@ -129,6 +129,54 @@ BunkerProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/build
 .PHONY : BunkerProject/fast
 
+src/Controller/MissionController.o: src/Controller/MissionController.cpp.o
+.PHONY : src/Controller/MissionController.o
+
+# target to build an object file
+src/Controller/MissionController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
+.PHONY : src/Controller/MissionController.cpp.o
+
+src/Controller/MissionController.i: src/Controller/MissionController.cpp.i
+.PHONY : src/Controller/MissionController.i
+
+# target to preprocess a source file
+src/Controller/MissionController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.i
+.PHONY : src/Controller/MissionController.cpp.i
+
+src/Controller/MissionController.s: src/Controller/MissionController.cpp.s
+.PHONY : src/Controller/MissionController.s
+
+# target to generate assembly for a file
+src/Controller/MissionController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.s
+.PHONY : src/Controller/MissionController.cpp.s
+
+src/Controller/TelemetryWebSocketController.o: src/Controller/TelemetryWebSocketController.cpp.o
+.PHONY : src/Controller/TelemetryWebSocketController.o
+
+# target to build an object file
+src/Controller/TelemetryWebSocketController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o
+.PHONY : src/Controller/TelemetryWebSocketController.cpp.o
+
+src/Controller/TelemetryWebSocketController.i: src/Controller/TelemetryWebSocketController.cpp.i
+.PHONY : src/Controller/TelemetryWebSocketController.i
+
+# target to preprocess a source file
+src/Controller/TelemetryWebSocketController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.i
+.PHONY : src/Controller/TelemetryWebSocketController.cpp.i
+
+src/Controller/TelemetryWebSocketController.s: src/Controller/TelemetryWebSocketController.cpp.s
+.PHONY : src/Controller/TelemetryWebSocketController.s
+
+# target to generate assembly for a file
+src/Controller/TelemetryWebSocketController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.s
+.PHONY : src/Controller/TelemetryWebSocketController.cpp.s
+
 src/Domain/BaySlot.o: src/Domain/BaySlot.cpp.o
 .PHONY : src/Domain/BaySlot.o
 
@@ -152,6 +200,30 @@ src/Domain/BaySlot.s: src/Domain/BaySlot.cpp.s
 src/Domain/BaySlot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.s
 .PHONY : src/Domain/BaySlot.cpp.s
+
+src/Domain/Bunker.o: src/Domain/Bunker.cpp.o
+.PHONY : src/Domain/Bunker.o
+
+# target to build an object file
+src/Domain/Bunker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o
+.PHONY : src/Domain/Bunker.cpp.o
+
+src/Domain/Bunker.i: src/Domain/Bunker.cpp.i
+.PHONY : src/Domain/Bunker.i
+
+# target to preprocess a source file
+src/Domain/Bunker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.i
+.PHONY : src/Domain/Bunker.cpp.i
+
+src/Domain/Bunker.s: src/Domain/Bunker.cpp.s
+.PHONY : src/Domain/Bunker.s
+
+# target to generate assembly for a file
+src/Domain/Bunker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.s
+.PHONY : src/Domain/Bunker.cpp.s
 
 src/Domain/Drone.o: src/Domain/Drone.cpp.o
 .PHONY : src/Domain/Drone.o
@@ -306,9 +378,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BunkerProject"
+	@echo "... src/Controller/MissionController.o"
+	@echo "... src/Controller/MissionController.i"
+	@echo "... src/Controller/MissionController.s"
+	@echo "... src/Controller/TelemetryWebSocketController.o"
+	@echo "... src/Controller/TelemetryWebSocketController.i"
+	@echo "... src/Controller/TelemetryWebSocketController.s"
 	@echo "... src/Domain/BaySlot.o"
 	@echo "... src/Domain/BaySlot.i"
 	@echo "... src/Domain/BaySlot.s"
+	@echo "... src/Domain/Bunker.o"
+	@echo "... src/Domain/Bunker.i"
+	@echo "... src/Domain/Bunker.s"
 	@echo "... src/Domain/Drone.o"
 	@echo "... src/Domain/Drone.i"
 	@echo "... src/Domain/Drone.s"

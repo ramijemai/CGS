@@ -2,67 +2,114 @@
 #include "Services/MissionPlanner.h"
 #include "Services/RecoveryService.h"
 #include "Services/TelemetryManager.h"
-#include "Domain/Drone.h"
+#include "Controller/MissionController.h"
+#include "Controller/TelemetryWebSocketController.h"
+
+#include <boost/asio/ip/tcp.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/beast/websocket.hpp>
 #include <iostream>
 #include <memory>
+#include <string>
+#include <thread>
 
-namespace {
+namespace beast = boost::beast;
+namespace http = beast::http;
+namespace websocket = beast::websocket;
+namespace asio = boost::asio;
+using tcp = asio::ip::tcp;
 
-void printBunkerStatus(const CapacityEngine& bunkerEngine) {
-    std::cout << "\n[STATUS] Bunker slots:\n";
-    for (const auto& slot : bunkerEngine.getAllSlots()) {
-        std::cout << "  - Bay " << slot->getSlotId() << ": ";
-        if (slot->isOccupied()) {
-            const auto drone = slot->getDrone();
-            std::cout << drone->getId() << " (" << drone->getBatteryLevel() << "% battery)\n";
-        } else {
-            std::cout << "[VACANT]\n";
+// Session handler for Boost.Beast
+void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWebSocketController& wsCtrl) {
+    beast::error_code ec;
+    beast::flat_buffer buffer;
+
+    // 1. Read the HTTP Request
+    http::request<http::string_body> req;
+    http::read(socket, buffer, req, ec);
+    if (ec) return;
+
+    // Check if it is a WebSocket upgrade request
+    if (websocket::is_upgrade(req)) {
+        if (req.target() == "/ws/telemetry") {
+            websocket::stream<tcp::socket> ws(std::move(socket));
+            ws.accept(req, ec);
+            if (ec) return;
+
+            while (true) {
+                beast::flat_buffer wsBuffer;
+                ws.read(wsBuffer, ec);
+                if (ec == websocket::error::closed) break;
+                if (ec) return;
+
+                std::string message = beast::buffers_to_string(wsBuffer.data());
+                wsCtrl.onMessage(message, [&ws](const std::string& reply) {
+                    ws.text(true);
+                    ws.write(asio::buffer(reply));
+                });
+            }
         }
+        return;
     }
+
+    // 2. Process REST Endpoints
+    http::response<http::string_body> res;
+    res.version(req.version());
+    res.keep_alive(false);
+    res.set(http::field::content_type, "application/json");
+
+    if (req.method() == http::verb::get && req.target() == "/api/v1/bunker/status") {
+        auto [code, body] = missionCtrl.handleGetBunkerStatus();
+        res.result(code);
+        res.body() = boost::json::serialize(body);
+    } 
+    else if (req.method() == http::verb::post && req.target() == "/api/v1/missions/launch") {
+        auto [code, body] = missionCtrl.handleLaunchMission(req.body());
+        res.result(code);
+        res.body() = boost::json::serialize(body);
+    } 
+    else {
+        res.result(http::status::not_found);
+        res.body() = R"({"error": "Endpoint not found"})";
+    }
+
+    res.prepare_payload();
+    http::write(socket, res, ec);
 }
 
-} // namespace
-
 int main() {
-    CapacityEngine bunkerEngine(2);
-    TelemetryManager telemetry;
+    try {
+        // Initialize Core Services
+        CapacityEngine bunkerEngine(2);
+        TelemetryManager telemetryManager;
+        MissionPlanner missionPlanner(bunkerEngine);
+        RecoveryService recoveryService(bunkerEngine);
 
-    auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
-    auto droneBeta = std::make_shared<Drone>("DRONE-BETA", 95.0);
+        // Instantiate Controllers
+        MissionController missionController(missionPlanner, bunkerEngine);
+        TelemetryWebSocketController wsController(telemetryManager, recoveryService);
 
-    bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
-    bunkerEngine.getSlot(2)->dockDrone(droneBeta);
+        // Boost.Asio Listener Setup
+        asio::io_context ioc;
+        tcp::acceptor acceptor(ioc, tcp::endpoint(tcp::v4(), 18080));
 
-    std::cout << "[BOOT] Bunker initialized with two drones.\n";
-    printBunkerStatus(bunkerEngine);
+        std::cout << "[SERVER] Boost.Beast HTTP & WebSocket Server running on port 18080...\n";
 
-    MissionPlanner planner(bunkerEngine);
-    GpsCoordinate inspectionTarget{36.8065, 10.1815, 100.0};
+        while (true) {
+            tcp::socket socket(ioc);
+            acceptor.accept(socket);
 
-    if (!planner.planAndExecuteInspection(inspectionTarget, 120.0)) {
-        std::cerr << "[ERROR] Mission launch failed.\n";
+            // Handle each client session in a detached thread
+            std::thread([s = std::move(socket), &missionController, &wsController]() mutable {
+                runSession(std::move(s), missionController, wsController);
+            }).detach();
+        }
+    } 
+    catch (const std::exception& e) {
+        std::cerr << "[CRITICAL] Server Error: " << e.what() << std::endl;
         return 1;
     }
 
-    telemetry.registerActiveDrone(droneAlpha, inspectionTarget);
-    telemetry.printActiveDronesTelemetry();
-
-    TelemetryMessage returnCommand;
-    returnCommand.droneId = droneAlpha->getId();
-    returnCommand.command = DroneCommand::RETURN_TO_BUNKER;
-    returnCommand.messageText = "Mission complete, return to bunker";
-    telemetry.sendCommand(droneAlpha->getId(), returnCommand);
-
-    droneAlpha->setBatteryLevel(30.0);
-    RecoveryService recoveryService(bunkerEngine);
-    if (!recoveryService.executeRecoveryAndDocking(droneAlpha)) {
-        std::cerr << "[ERROR] Recovery failed.\n";
-        return 1;
-    }
-
-    telemetry.unregisterActiveDrone(droneAlpha->getId());
-    printBunkerStatus(bunkerEngine);
-
-    std::cout << "[DONE] Mission flow completed using the service layer.\n";
     return 0;
 }

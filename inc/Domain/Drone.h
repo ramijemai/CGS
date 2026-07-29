@@ -9,7 +9,8 @@ public:
     const std::string& getId() const;
     double getBatteryLevel() const;
     void setBatteryLevel(double level);
-
+    const GpsCoordinate& getCurrentLocation() const;
+    void setCurrentLocation(const GpsCoordinate& location);
     DroneState getState() const;
     void setState(DroneState state);
 
@@ -19,4 +20,5 @@ private:
     std::string m_id;
     double m_batteryLevel;
     DroneState m_state;
+    GpsCoordinate m_currentLocation;
 };

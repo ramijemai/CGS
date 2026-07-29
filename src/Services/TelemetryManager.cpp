@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <algorithm>
 
 void DroneTelemetry::print() const {
     std::cout << "[TELEMETRY] Drone: " << droneId 
@@ -40,6 +41,7 @@ void TelemetryManager::unregisterActiveDrone(const std::string& droneId) {
         m_activeDrones.erase(it);
         std::cout << "[TELEMETRY MANAGER] Drone '" << droneId << "' unregistered (LANDED).\n";
     }
+    trimHistory();
 }
 
 void TelemetryManager::updateDroneTelemetry(const std::string& droneId, const DroneTelemetry& telemetry) {
@@ -48,6 +50,7 @@ void TelemetryManager::updateDroneTelemetry(const std::string& droneId, const Dr
         it->second = telemetry;
         it->second.lastUpdate = std::time(nullptr);
         m_telemetryHistory.push_back(telemetry);
+        trimHistory();
     }
 }
 
@@ -74,6 +77,7 @@ void TelemetryManager::sendCommand(const std::string& droneId, const TelemetryMe
     TelemetryMessage logMsg = message;
     logMsg.timestamp = std::time(nullptr);
     m_commandHistory.push_back(logMsg);
+    trimHistory();
 }
 
 void TelemetryManager::receiveStatusUpdate(const std::string& droneId, const DroneTelemetry& telemetry) {
@@ -96,6 +100,25 @@ int TelemetryManager::getActiveDroneCount() const {
     return m_activeDrones.size();
 }
 
+std::vector<TelemetryMessage> TelemetryManager::getCommandHistory() const {
+    return m_commandHistory;
+}
+
+void TelemetryManager::trimHistory() {
+    if (m_telemetryHistory.size() > kMaxHistory) {
+        m_telemetryHistory.erase(
+            m_telemetryHistory.begin(),
+            m_telemetryHistory.begin() + (m_telemetryHistory.size() - kMaxHistory)
+        );
+    }
+    if (m_commandHistory.size() > kMaxHistory) {
+        m_commandHistory.erase(
+            m_commandHistory.begin(),
+            m_commandHistory.begin() + (m_commandHistory.size() - kMaxHistory)
+        );
+    }
+}
+/*
 void TelemetryManager::simulateDroneFlight(const std::string& droneId, const GpsCoordinate& target, double flightTime) {
     auto telem = getDroneTelemetry(droneId);
     if (!telem) return;
@@ -127,3 +150,4 @@ void TelemetryManager::simulateDroneFlight(const std::string& droneId, const Gps
     std::cout << "[FLIGHT SIMULATION] Drone '" << droneId << "' reached target. "
               << "Battery: " << telem->batteryLevel << "%\n";
 }
+*/

@@ -43,11 +43,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/local/sbin/uname"
@@ -79,11 +81,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "message-v1"
@@ -136,11 +140,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/local/sbin/gmake"
@@ -172,11 +178,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -230,11 +238,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/local/sbin/c++"
@@ -266,11 +276,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -322,11 +334,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "message-v1"
@@ -393,11 +407,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/ar"
     search_context:
@@ -425,11 +441,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -474,11 +492,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/ranlib"
     search_context:
@@ -506,11 +526,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -555,11 +577,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/strip"
     search_context:
@@ -587,11 +611,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -636,11 +662,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/ld"
     search_context:
@@ -668,11 +696,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -717,11 +747,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/nm"
     search_context:
@@ -749,11 +781,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -798,11 +832,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/objdump"
     search_context:
@@ -830,11 +866,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -879,11 +917,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/objcopy"
     search_context:
@@ -911,11 +951,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -960,11 +1002,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/readelf"
     search_context:
@@ -992,11 +1036,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -1041,11 +1087,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/bin/dlltool"
@@ -1071,11 +1119,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/dlltool"
       - "/mnt/c/Program Files/CMake/bin/dlltool"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/dlltool"
+      - "/mnt/c/Program Files/nodejs/dlltool"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/dlltool"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/dlltool"
       - "/mnt/c/Program Files/Tesseract-OCR/dlltool"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/dlltool"
       - "/mnt/c/msys64/mingw64/bin/dlltool"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/dlltool"
       - "/snap/bin/dlltool"
     found: false
     search_context:
@@ -1103,11 +1153,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -1152,11 +1204,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     found: "/usr/bin/addr2line"
     search_context:
@@ -1184,11 +1238,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -1233,11 +1289,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/bin/tapi"
@@ -1263,11 +1321,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/tapi"
       - "/mnt/c/Program Files/CMake/bin/tapi"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi"
+      - "/mnt/c/Program Files/nodejs/tapi"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/tapi"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/tapi"
       - "/mnt/c/Program Files/Tesseract-OCR/tapi"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
       - "/mnt/c/msys64/mingw64/bin/tapi"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/tapi"
       - "/snap/bin/tapi"
     found: false
     search_context:
@@ -1295,11 +1355,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -1347,11 +1409,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
@@ -1377,11 +1441,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/gcc-ar-15.2"
       - "/mnt/c/Program Files/CMake/bin/gcc-ar-15.2"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ar-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/gcc-ar-15.2"
       - "/mnt/c/Program Files/Tesseract-OCR/gcc-ar-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-15.2"
       - "/mnt/c/msys64/mingw64/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/gcc-ar-15.2"
       - "/snap/bin/gcc-ar-15.2"
     found: "/usr/bin/gcc-ar-15"
     search_context:
@@ -1409,11 +1475,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "find-v1"
@@ -1461,11 +1529,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/"
       - "/mnt/c/Program Files/CMake/bin/"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/nodejs/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/"
       - "/mnt/c/Program Files/Tesseract-OCR/"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "/mnt/c/msys64/mingw64/bin/"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/"
       - "/snap/bin/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
@@ -1491,11 +1561,13 @@ events:
       - "/mnt/c/Program Files/Git/cmd/gcc-ranlib-15.2"
       - "/mnt/c/Program Files/CMake/bin/gcc-ranlib-15.2"
       - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ranlib-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-15.2"
       - "/mnt/c/Program Files/Tesseract-OCR/gcc-ranlib-15.2"
       - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-15.2"
       - "/mnt/c/msys64/mingw64/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/Victus/AppData/Roaming/npm/gcc-ranlib-15.2"
       - "/snap/bin/gcc-ranlib-15.2"
     found: "/usr/bin/gcc-ranlib-15"
     search_context:
@@ -1523,11 +1595,13 @@ events:
         - "/mnt/c/Program Files/Git/cmd"
         - "/mnt/c/Program Files/CMake/bin"
         - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
         - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
         - "/mnt/c/Program Files/Tesseract-OCR"
         - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
         - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
         - "/snap/bin"
   -
     kind: "try_compile-v1"
@@ -1538,8 +1612,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q"
-      binary: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q"
+      source: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz"
+      binary: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1549,13 +1623,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q'
+        Change Dir: '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c9e3/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_7c9e3.dir/build.make CMakeFiles/cmTC_7c9e3.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q'
-        Building CXX object CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5fdb5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5fdb5.dir/build.make CMakeFiles/cmTC_5fdb5.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz'
+        Building CXX object CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1565,8 +1639,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7c9e3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccc3QRbN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5fdb5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccuLLn8N.s
         GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1587,14 +1661,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b661a74662ad7cf413c4193391ab5290
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/'
-         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccc3QRbN.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccuLLn8N.s
         GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_7c9e3
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c9e3.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_5fdb5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fdb5.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
@@ -1607,14 +1681,14 @@ events:
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c9e3' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c9e3.'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpiTrac.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7c9e3 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fdb5' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5fdb5.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN2St15.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fdb5 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         collect2 version 15.2.0
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpiTrac.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7c9e3 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN2St15.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fdb5 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c9e3' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c9e3.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7c9e3
-        gmake[1]: Leaving directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fdb5' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5fdb5.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5fdb5
+        gmake[1]: Leaving directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz'
         
       exitCode: 0
   -
@@ -1655,13 +1729,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q']
+        ignore line: [Change Dir: '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c9e3/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7c9e3.dir/build.make CMakeFiles/cmTC_7c9e3.dir/build]
-        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-k3lP7Q']
-        ignore line: [Building CXX object CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5fdb5/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_5fdb5.dir/build.make CMakeFiles/cmTC_5fdb5.dir/build]
+        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-BolTnz']
+        ignore line: [Building CXX object CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1671,8 +1745,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7c9e3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccc3QRbN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5fdb5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccuLLn8N.s]
         ignore line: [GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1693,14 +1767,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b661a74662ad7cf413c4193391ab5290]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/']
-        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccc3QRbN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccuLLn8N.s]
         ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_7c9e3]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c9e3.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_5fdb5]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fdb5.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
@@ -1713,13 +1787,13 @@ events:
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7c9e3' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7c9e3.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpiTrac.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7c9e3 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5fdb5' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5fdb5.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN2St15.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fdb5 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccpiTrac.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccN2St15.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1737,7 +1811,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7c9e3] ==> ignore
+          arg [cmTC_5fdb5] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
@@ -1752,7 +1826,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1763,7 +1837,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpiTrac.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7c9e3 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7c9e3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN2St15.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5fdb5 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_5fdb5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1794,4 +1868,1191 @@ events:
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.46
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:141 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:215 (boost_find_component)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "boost_headers"
+    configs:
+      -
+        filename: "boost_headersConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_headers-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.90.0"
+      version_complete: "1.90.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "/usr/lib/x86_64-linux-gnu/cmake"
+      names:
+        - "boost_headers"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_headers-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.90.0/boost_headersConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.90.0/boost_headers-config.cmake"
+      mode: "config"
+      version: "1.90.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR"
+        - "/mnt/c/ProgramData/chocolatey/bin"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Program Files/Tesseract-OCR"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:141 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "boost_system"
+    configs:
+      -
+        filename: "boost_systemConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_system-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.90.0"
+      version_complete: "1.90.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "/usr/lib/x86_64-linux-gnu/cmake"
+      names:
+        - "boost_system"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/games/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/games/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/wsl/lib/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/wsl/lib/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/system32/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/system32/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/Wbem/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/Wbem/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/OpenSSH/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/WINDOWS/System32/OpenSSH/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/ProgramData/chocolatey/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/ProgramData/chocolatey/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/Git/cmd/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/Git/cmd/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/CMake/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/CMake/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/nodejs/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/nodejs/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/Tesseract-OCR/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Program Files/Tesseract-OCR/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/msys64/mingw64/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/msys64/mingw64/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/cmake/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/snap/cmake/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/boost_systemConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/boost_system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR"
+        - "/mnt/c/ProgramData/chocolatey/bin"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Program Files/Tesseract-OCR"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:14 (find_package)"
+    name: "Boost"
+    components:
+      -
+        name: "system"
+        required: true
+        found: false
+      -
+        name: "json"
+        required: true
+        found: false
+    configs:
+      -
+        filename: "BoostConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Boost"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_wserialization-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_wserialization-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_wave-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_wave-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_url-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_url-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_type_erasure-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_type_erasure-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_timer-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_timer-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_test_exec_monitor-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_test_exec_monitor-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_noop-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_noop-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_basic-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_basic-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_backtrace-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_backtrace-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_addr2line-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_stacktrace_addr2line-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_serialization-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_serialization-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_random-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_random-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_python-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_python-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_program_options-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_program_options-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_process-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_process-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_prg_exec_monitor-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_prg_exec_monitor-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_numpy-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_numpy-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_nowide-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_nowide-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_mpi_python-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_mpi_python-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_mpi-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_mpi-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1l-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1l-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1f-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1f-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_tr1-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99l-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99l-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99f-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99f-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_math_c99-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_log-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_log-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_locale-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_locale-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_graph_parallel-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_graph_parallel-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_graph-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_graph-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_fiber-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_fiber-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_exception-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_exception-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_coroutine-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_coroutine-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_context-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_context-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_container-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_container-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_charconv-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_charconv-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.90.0/BoostConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.90.0/boost-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake"
+      mode: "config"
+      version: "1.90.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR"
+        - "/mnt/c/ProgramData/chocolatey/bin"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Program Files/Tesseract-OCR"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0"
+      binary: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_80bd9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_80bd9.dir/build.make CMakeFiles/cmTC_80bd9.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0'
+        Building CXX object CMakeFiles/cmTC_80bd9.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=c++17 -o CMakeFiles/cmTC_80bd9.dir/src.cxx.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0/src.cxx
+        Linking CXX executable cmTC_80bd9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80bd9.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_80bd9.dir/src.cxx.o -o cmTC_80bd9
+        gmake[1]: Leaving directory '/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/CMakeScratch/TryCompile-rfn7J0'
+        
+      exitCode: 0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/boost_json-config.cmake:102 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:141 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "CMakeLists.txt:17 (find_package)"
+    name: "boost_container"
+    configs:
+      -
+        filename: "boost_containerConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_container-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.90.0"
+      version_complete: "1.90.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "/usr/lib/x86_64-linux-gnu/cmake"
+      names:
+        - "boost_container"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_containerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_container-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_containerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_container-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_container-1.90.0/boost_containerConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/boost_container-1.90.0/boost_container-config.cmake"
+      mode: "config"
+      version: "1.90.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR"
+        - "/mnt/c/ProgramData/chocolatey/bin"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Program Files/Tesseract-OCR"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:141 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "CMakeLists.txt:17 (find_package)"
+    name: "boost_json"
+    configs:
+      -
+        filename: "boost_jsonConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "boost_json-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "1.90.0"
+      version_complete: "1.90.0"
+      exact: true
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      hints:
+        - "/usr/lib/x86_64-linux-gnu/cmake"
+      names:
+        - "boost_json"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_jsonConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles/pkgRedirects/boost_json-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_jsonConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_json-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/boost_jsonConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/boost_json-config.cmake"
+      mode: "config"
+      version: "1.90.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Users/Victus/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-win32-x64/resources/binaries/win32/x86_64"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/mnt/c/Users/Victus/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR"
+        - "/mnt/c/ProgramData/chocolatey/bin"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Python/Launcher/"
+        - "/mnt/c/Users/Victus/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Program Files/Tesseract-OCR"
+        - "/mnt/c/Users/Victus/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/msys64/mingw64/bin"
+        - "/mnt/c/Users/Victus/AppData/Roaming/npm"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
 ...

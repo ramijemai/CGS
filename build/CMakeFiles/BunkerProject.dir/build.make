@@ -100,10 +100,24 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/BaySlot.cpp -o CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.s
 
+CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
+CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp
+CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp
+
+CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp > CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.i
+
+CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp -o CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.s
+
 CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
 CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/CapacityEngine.cpp
 CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/CapacityEngine.cpp
 
 CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.s: cmake_force
 CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
 CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/MissionPlanner.cpp
 CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/MissionPlanner.cpp
 
 CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.s: cmake_force
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/RecoveryService.cpp
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/RecoveryService.cpp
 
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.s: cmake_force
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/TelemetryManager.cpp
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/TelemetryManager.cpp
 
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.i: cmake_force
@@ -156,10 +170,38 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/TelemetryManager.cpp -o CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.s
 
+CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
+CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp
+CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp
+
+CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp > CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.i
+
+CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp -o CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.s
+
+CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
+CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp
+CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o -MF CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp
+
+CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp > CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.i
+
+CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp -o CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.s
+
 CMakeFiles/BunkerProject.dir/src/main.cpp.o: CMakeFiles/BunkerProject.dir/flags.make
 CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/main.cpp
 CMakeFiles/BunkerProject.dir/src/main.cpp.o: CMakeFiles/BunkerProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BunkerProject.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BunkerProject.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BunkerProject.dir/src/main.cpp.o -MF CMakeFiles/BunkerProject.dir/src/main.cpp.o.d -o CMakeFiles/BunkerProject.dir/src/main.cpp.o -c /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/main.cpp
 
 CMakeFiles/BunkerProject.dir/src/main.cpp.i: cmake_force
@@ -174,10 +216,13 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.s: cmake_force
 BunkerProject_OBJECTS = \
 "CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o" \
+"CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o" \
+"CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o" \
+"CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o" \
 "CMakeFiles/BunkerProject.dir/src/main.cpp.o"
 
 # External object files for target BunkerProject
@@ -185,15 +230,20 @@ BunkerProject_EXTERNAL_OBJECTS =
 
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o
+BunkerProject: CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o
+BunkerProject: CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
+BunkerProject: CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/src/main.cpp.o
 BunkerProject: CMakeFiles/BunkerProject.dir/build.make
 BunkerProject: CMakeFiles/BunkerProject.dir/compiler_depend.ts
+BunkerProject: /usr/lib/x86_64-linux-gnu/libboost_json.so.1.90.0
+BunkerProject: /usr/lib/x86_64-linux-gnu/libboost_container.so.1.90.0
 BunkerProject: CMakeFiles/BunkerProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable BunkerProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Victus/Desktop/ProjectC/CGS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable BunkerProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BunkerProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
