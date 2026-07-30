@@ -80,16 +80,23 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
 
 int main() {
     try {
+                Bunker bunker({36.8065, 10.1815, 0.0});
+
         // Initialize Core Services
         CapacityEngine bunkerEngine(2);
+        auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
+    auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 95.0);
+    droneAlpha->setCurrentLocation(bunker.getGpsLocation());
+    droneBeta->setCurrentLocation(bunker.getGpsLocation());
+    bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
+    bunkerEngine.getSlot(2)->dockDrone(droneBeta);
         TelemetryManager telemetryManager;
         MissionPlanner missionPlanner(bunkerEngine);
         RecoveryService recoveryService(bunkerEngine);
 
         // Instantiate Controllers
         MissionController missionController(missionPlanner, bunkerEngine);
-        TelemetryWebSocketController wsController(telemetryManager, recoveryService);
-
+        TelemetryWebSocketController wsController(telemetryManager, recoveryService, bunkerEngine, bunker);
         // Boost.Asio Listener Setup
         asio::io_context ioc;
         tcp::acceptor acceptor(ioc, tcp::endpoint(tcp::v4(), 18080));

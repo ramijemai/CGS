@@ -11,14 +11,20 @@ std::pair<int, bj::value> MissionController::handleLaunchMission(const std::stri
         bj::value parsed = bj::parse(requestBody);
         const auto& obj = parsed.as_object();
 
+        // to_number<double>() accepts both "100" (int64) and "100.0" (double) from JSON.
+        // as_double() would throw on the former, rejecting perfectly valid requests.
         GpsCoordinate target{
-            obj.at("latitude").as_double(),
-            obj.at("longitude").as_double(),
-            obj.at("altitude").as_double()
+            obj.at("latitude").to_number<double>(),
+            obj.at("longitude").to_number<double>(),
+            obj.at("altitude").to_number<double>()
         };
-        double duration = obj.at("durationSeconds").as_double();
 
-        bool result = planner_.planAndExecuteInspection(target, duration);
+        // NOTE: renamed from "durationSeconds" -> "cruiseAltitude" to match what
+        // MissionPlanner::planAndExecuteInspection actually expects as its 2nd param.
+        // The old field name was silently feeding a duration value in as an altitude.
+        double cruiseAltitude = obj.at("cruiseAltitude").to_number<double>();
+
+        bool result = planner_.planAndExecuteInspection(target, cruiseAltitude);
 
         if (result) {
             return {200, bj::object{{"status", "SUCCESS"}, {"message", "Mission launched successfully."}}};
