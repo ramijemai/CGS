@@ -1,15 +1,38 @@
 #include "Services/MissionPlanner.h"
 #include <iostream>
 
+const std::vector<ActiveMission>& MissionPlanner::getActiveMissions() const {
+    return m_activeMissions;
+}
+
 MissionPlanner::MissionPlanner(CapacityEngine& capacityEngine) 
     : m_capacityEngine(capacityEngine) {}
 
-bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target, double cruiseAltitude) {
+bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target,
+                                               double cruiseAltitude,
+                                               const std::string& requestedDroneId) {
     std::cout << "\n==================================================\n";
     std::cout << "        INITIATING PHASE 1: MISSION DISPATCH       \n";
     std::cout << "==================================================\n";
 
-    auto slot = m_capacityEngine.findReadyDroneSlot();
+    std::shared_ptr<BaySlot> slot;
+    if (!requestedDroneId.empty()) {
+        slot = m_capacityEngine.findDroneSlotById(requestedDroneId);
+        if (!slot) {
+            std::cerr << "[MISSION PLANNER ERROR] Drone '" << requestedDroneId
+                      << "' is not currently docked in a bunker slot.\n";
+            return false;
+        }
+
+        if (!slot->isOccupied() || !slot->getDrone()->isReadyForMission()) {
+            std::cerr << "[MISSION PLANNER ERROR] Drone '" << requestedDroneId
+                      << "' is not ready for mission dispatch.\n";
+            return false;
+        }
+    } else {
+        slot = m_capacityEngine.findReadyDroneSlot();
+    }
+
     if (!slot) {
         std::cerr << "[MISSION PLANNER ERROR] No ready drones available in any bunker slot.\n";
         return false;
@@ -34,6 +57,7 @@ bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target, doubl
     std::cout << "[MISSION PLANNER] Pre-flight diagnostics PASSED. Systems NOMINAL.\n";
 
     drone->setState(DroneState::InFlight);
+    m_activeMissions.push_back({drone->getId(), target, cruiseAltitude, "ACTIVE"});
 
     std::cout << "[MISSION PLANNER] Drone dispatched to Target GPS (" 
               << target.latitude << ", " << target.longitude 

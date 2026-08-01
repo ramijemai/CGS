@@ -7,6 +7,7 @@ struct LaunchMissionRequestDto {
     double targetLon;
     double targetAlt;
     double durationSeconds;
+    std::string droneId;
 };
 
 struct ApiResponseDto {

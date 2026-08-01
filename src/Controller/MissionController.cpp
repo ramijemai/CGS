@@ -24,7 +24,12 @@ std::pair<int, bj::value> MissionController::handleLaunchMission(const std::stri
         // The old field name was silently feeding a duration value in as an altitude.
         double cruiseAltitude = obj.at("cruiseAltitude").to_number<double>();
 
-        bool result = planner_.planAndExecuteInspection(target, cruiseAltitude);
+        std::string requestedDroneId;
+        if (obj.contains("droneId")) {
+            requestedDroneId = bj::value_to<std::string>(obj.at("droneId"));
+        }
+
+        bool result = planner_.planAndExecuteInspection(target, cruiseAltitude, requestedDroneId);
 
         if (result) {
             return {200, bj::object{{"status", "SUCCESS"}, {"message", "Mission launched successfully."}}};
@@ -55,4 +60,21 @@ std::pair<int, bj::value> MissionController::handleGetBunkerStatus() {
     }
 
     return {200, bj::object{{"slots", slotsArray}}};
+}
+
+std::pair<int, bj::value> MissionController::handleGetActiveMissions() {
+    bj::array missionsArray;
+
+    for (const auto& mission : planner_.getActiveMissions()) {
+        missionsArray.push_back(bj::object{
+            {"droneId", mission.droneId},
+            {"status", mission.status},
+            {"target", bj::object{{"latitude", mission.target.latitude},
+                                   {"longitude", mission.target.longitude},
+                                   {"altitude", mission.target.altitude}}},
+            {"cruiseAltitude", mission.cruiseAltitude}
+        });
+    }
+
+    return {200, bj::object{{"missions", missionsArray}}};
 }

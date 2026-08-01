@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include <cstddef>
+#include <string>
 
 class CapacityEngine {
 public:
@@ -14,6 +15,7 @@ public:
 
     std::shared_ptr<BaySlot> getSlot(int slotId);
     std::shared_ptr<BaySlot> findReadyDroneSlot();
+    std::shared_ptr<BaySlot> findDroneSlotById(const std::string& droneId);
     std::shared_ptr<BaySlot> findVacantSlot();
     const std::vector<std::shared_ptr<BaySlot>>& getAllSlots() const;
 

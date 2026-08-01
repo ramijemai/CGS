@@ -16,6 +16,9 @@ public:
     // Handles GET /api/v1/bunker/status
     std::pair<int, boost::json::value> handleGetBunkerStatus();
 
+    // Handles GET /api/v1/missions/active
+    std::pair<int, boost::json::value> handleGetActiveMissions();
+
 private:
     MissionPlanner& planner_;
     CapacityEngine& capacityEngine_;

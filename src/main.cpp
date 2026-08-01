@@ -53,17 +53,37 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
         return;
     }
 
-    // 2. Process REST Endpoints
+// 2. Process REST Endpoints
     http::response<http::string_body> res;
     res.version(req.version());
     res.keep_alive(false);
     res.set(http::field::content_type, "application/json");
 
+    // CORS headers — required for the Vite dev server (localhost:5173) to
+    // read responses at all. Applied to every REST response, including errors.
+    res.set(http::field::access_control_allow_origin, "http://localhost:5173");
+    res.set(http::field::access_control_allow_methods, "GET, POST, OPTIONS");
+    res.set(http::field::access_control_allow_headers, "Content-Type");
+
+    // Handle CORS preflight requests explicitly — browsers send these
+    // automatically before POST requests with a JSON content type.
+    if (req.method() == http::verb::options) {
+        res.result(http::status::no_content);
+        res.prepare_payload();
+        http::write(socket, res, ec);
+        return;
+    }
+
     if (req.method() == http::verb::get && req.target() == "/api/v1/bunker/status") {
         auto [code, body] = missionCtrl.handleGetBunkerStatus();
         res.result(code);
         res.body() = boost::json::serialize(body);
-    } 
+    }
+    else if (req.method() == http::verb::get && req.target() == "/api/v1/missions/active") {
+        auto [code, body] = missionCtrl.handleGetActiveMissions();
+        res.result(code);
+        res.body() = boost::json::serialize(body);
+    }
     else if (req.method() == http::verb::post && req.target() == "/api/v1/missions/launch") {
         auto [code, body] = missionCtrl.handleLaunchMission(req.body());
         res.result(code);
@@ -83,13 +103,13 @@ int main() {
                 Bunker bunker({36.8065, 10.1815, 0.0});
 
         // Initialize Core Services
-        CapacityEngine bunkerEngine(2);
+        CapacityEngine bunkerEngine(3);
         auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
-    auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 95.0);
-    droneAlpha->setCurrentLocation(bunker.getGpsLocation());
-    droneBeta->setCurrentLocation(bunker.getGpsLocation());
-    bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
-    bunkerEngine.getSlot(2)->dockDrone(droneBeta);
+        auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 50.0);
+        droneAlpha->setCurrentLocation(bunker.getGpsLocation());
+        droneBeta->setCurrentLocation(bunker.getGpsLocation());
+        bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
+        bunkerEngine.getSlot(2)->dockDrone(droneBeta);
         TelemetryManager telemetryManager;
         MissionPlanner missionPlanner(bunkerEngine);
         RecoveryService recoveryService(bunkerEngine);

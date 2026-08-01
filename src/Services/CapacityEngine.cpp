@@ -22,6 +22,15 @@ std::shared_ptr<BaySlot> CapacityEngine::findReadyDroneSlot() {
     return nullptr;
 }
 
+std::shared_ptr<BaySlot> CapacityEngine::findDroneSlotById(const std::string& droneId) {
+    for (auto& slot : m_slots) {
+        if (slot->isOccupied() && slot->getDrone()->getId() == droneId) {
+            return slot;
+        }
+    }
+    return nullptr;
+}
+
 std::shared_ptr<BaySlot> CapacityEngine::findVacantSlot() {
     for (auto& slot : m_slots) {
         if (!slot->isOccupied() && slot->getBayState() == BayState::Vacant) {

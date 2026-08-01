@@ -92,7 +92,13 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
             };
             sendReply(bj::serialize(response));
 
-        } else {
+        } 
+        
+         else if (action == "REQUEST_TELEMETRY") {
+    broadcastTelemetry(sendReply);
+         }
+        
+        else {
             bj::object response{
                 {"event", "ERROR"},
                 {"message", "Unknown action: " + action}
@@ -108,6 +114,19 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
     }
 }
 
+namespace {
+    // Adjust to match the actual DroneState enum members in Domain/Drone.h
+    std::string droneStateToString(DroneState state) {
+        switch (state) {
+            case DroneState::InFlight:          return "IN_FLIGHT";
+            case DroneState::ReturningToBunker:  return "RETURNING";
+            case DroneState::Landing:            return "LANDING";
+            case DroneState::Fault:              return "FAULT";
+            default:                              return "DOCKED";
+        }
+    }
+}
+
 void TelemetryWebSocketController::broadcastTelemetry(SendTextCallback broadcast) {
     bj::array dronesArray;
 
@@ -119,7 +138,8 @@ void TelemetryWebSocketController::broadcastTelemetry(SendTextCallback broadcast
             {"altitude", telem.altitude},
             {"batteryLevel", telem.batteryLevel},
             {"speed", telem.speed},
-            {"heading", telem.heading}
+            {"heading", telem.heading},
+            {"state", droneStateToString(telem.state)}   // <-- new
         });
     }
 
