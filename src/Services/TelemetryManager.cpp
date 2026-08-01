@@ -31,6 +31,7 @@ void TelemetryManager::registerActiveDrone(const std::shared_ptr<Drone>& drone, 
     telem.lastUpdate = std::time(nullptr);
 
     m_activeDrones[drone->getId()] = telem;
+    m_droneRegistry[drone->getId()] = drone;   // <-- retain the real pointer
     std::cout << "[TELEMETRY MANAGER] Drone '" << drone->getId() << "' registered as ACTIVE.\n";
 }
 
@@ -39,9 +40,14 @@ void TelemetryManager::unregisterActiveDrone(const std::string& droneId) {
     if (it != m_activeDrones.end()) {
         m_telemetryHistory.push_back(it->second);
         m_activeDrones.erase(it);
+        m_droneRegistry.erase(droneId);   // <-- drop it once the drone is docked again
         std::cout << "[TELEMETRY MANAGER] Drone '" << droneId << "' unregistered (LANDED).\n";
     }
-    trimHistory();
+}
+
+std::shared_ptr<Drone> TelemetryManager::getActiveDronePtr(const std::string& droneId) const {
+    auto it = m_droneRegistry.find(droneId);
+    return it != m_droneRegistry.end() ? it->second : nullptr;
 }
 
 void TelemetryManager::updateDroneTelemetry(const std::string& droneId, const DroneTelemetry& telemetry) {

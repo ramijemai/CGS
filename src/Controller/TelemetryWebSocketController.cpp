@@ -6,32 +6,42 @@ namespace bj = boost::json;
 namespace {
     // Adjust these to match the real bounds of your DroneCommand enum.
     constexpr int64_t kMinCommandCode = 0;
-    constexpr int64_t kMaxCommandCode = 3; // e.g. if RETURN_TO_BUNKER == 1 and it's not the last value
+    constexpr int64_t kMaxCommandCode = 3;
+
+    // Adjust to match the actual DroneState enum members in Domain/Drone.h
+    std::string droneStateToString(DroneState state) {
+        switch (state) {
+            case DroneState::InFlight:          return "IN_FLIGHT";
+            case DroneState::ReturningToBunker:  return "RETURNING";
+            case DroneState::Landing:            return "LANDING";
+            case DroneState::Fault:              return "FAULT";
+            default:                              return "DOCKED";
+        }
+    }
 }
 
 TelemetryWebSocketController::TelemetryWebSocketController(TelemetryManager& telemetry,
                                                              RecoveryService& recovery,
                                                              CapacityEngine& capacityEngine,
-                                                             const Bunker& bunker)
+                                                             const Bunker& bunker,
+                                                             MissionPlanner& missionPlanner)
     : telemetryManager_(telemetry)
     , recoveryService_(recovery)
     , capacityEngine_(capacityEngine)
-    , bunker_(bunker) {}
+    , bunker_(bunker)
+    , missionPlanner_(missionPlanner) {}
 
-std::shared_ptr<Drone> TelemetryWebSocketController::findDockedDroneById(const std::string& droneId) const {
-    // LIMITATION: this only finds drones currently docked in a bay slot.
-    // A drone that is mid-flight has been undocked (MissionPlanner calls
-    // undockDrone() on dispatch) and its shared_ptr<Drone> isn't tracked
-    // anywhere accessible right now — TelemetryManager only stores a copied
-    // DroneTelemetry struct, not the original shared_ptr. So an
-    // INITIATE_RECOVERY request for an in-flight drone will currently fail
-    // to resolve here. See note below the code for the fix needed.
+std::shared_ptr<Drone> TelemetryWebSocketController::findDroneById(const std::string& droneId) const {
+    // Check docked bays first — covers drones that never launched, or that
+    // have already been recovered and re-docked.
     for (const auto& slot : capacityEngine_.getAllSlots()) {
         if (slot->isOccupied() && slot->getDrone()->getId() == droneId) {
             return slot->getDrone();
         }
     }
-    return nullptr;
+    // Fall back to the active-telemetry registry — covers in-flight drones,
+    // now that MissionPlanner registers them on dispatch.
+    return telemetryManager_.getActiveDronePtr(droneId);
 }
 
 void TelemetryWebSocketController::onMessage(const std::string& rawPayload, SendTextCallback sendReply) {
@@ -71,19 +81,27 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
 
         } else if (action == "INITIATE_RECOVERY") {
             std::string droneId = bj::value_to<std::string>(obj.at("droneId"));
-            auto drone = findDockedDroneById(droneId);
+            auto drone = findDroneById(droneId);
 
             if (!drone) {
                 bj::object err{
                     {"event", "ERROR"},
                     {"message", "Drone '" + droneId + "' not resolvable for recovery "
-                                 "(not currently docked, or unknown ID)."}
+                                 "(not docked, and no active telemetry registration)."}
                 };
                 sendReply(bj::serialize(err));
                 return;
             }
 
             bool ok = recoveryService_.executeRecoveryAndDocking(drone, bunker_);
+
+            if (ok) {
+                // Was missing: without this, a re-docked drone stays listed
+                // as active telemetry forever.
+                telemetryManager_.unregisterActiveDrone(droneId);
+                missionPlanner_.completeMission(droneId, "COMPLETED");
+
+            }
 
             bj::object response{
                 {"event", "RECOVERY_RESULT"},
@@ -92,13 +110,10 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
             };
             sendReply(bj::serialize(response));
 
-        } 
-        
-         else if (action == "REQUEST_TELEMETRY") {
-    broadcastTelemetry(sendReply);
-         }
-        
-        else {
+        } else if (action == "REQUEST_TELEMETRY") {
+            broadcastTelemetry(sendReply);
+
+        } else {
             bj::object response{
                 {"event", "ERROR"},
                 {"message", "Unknown action: " + action}
@@ -114,19 +129,6 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
     }
 }
 
-namespace {
-    // Adjust to match the actual DroneState enum members in Domain/Drone.h
-    std::string droneStateToString(DroneState state) {
-        switch (state) {
-            case DroneState::InFlight:          return "IN_FLIGHT";
-            case DroneState::ReturningToBunker:  return "RETURNING";
-            case DroneState::Landing:            return "LANDING";
-            case DroneState::Fault:              return "FAULT";
-            default:                              return "DOCKED";
-        }
-    }
-}
-
 void TelemetryWebSocketController::broadcastTelemetry(SendTextCallback broadcast) {
     bj::array dronesArray;
 
@@ -139,7 +141,7 @@ void TelemetryWebSocketController::broadcastTelemetry(SendTextCallback broadcast
             {"batteryLevel", telem.batteryLevel},
             {"speed", telem.speed},
             {"heading", telem.heading},
-            {"state", droneStateToString(telem.state)}   // <-- new
+            {"state", droneStateToString(telem.state)}
         });
     }
 

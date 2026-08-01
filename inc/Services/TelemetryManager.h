@@ -1,7 +1,9 @@
+// TelemetryManager.h
 #pragma once
 #include "Domain/Drone.h"
 #include "Common/Types.h"
 #include <map>
+#include <unordered_map>
 #include <memory>
 #include <string>
 #include <vector>
@@ -77,6 +79,8 @@ public:
 
     // Get command history for dashboard display
     std::vector<TelemetryMessage> getCommandHistory() const;
+    std::shared_ptr<Drone> getActiveDronePtr(const std::string& droneId) const;
+
 
     // Simulate drone flight (update positions over time)
     void simulateDroneFlight(const std::string& droneId, const GpsCoordinate& target, double flightTime);
@@ -85,6 +89,7 @@ private:
     static constexpr size_t kMaxHistory = 1000;
 
     std::map<std::string, DroneTelemetry> m_activeDrones;
+    std::unordered_map<std::string, std::shared_ptr<Drone>> m_droneRegistry;
     std::vector<TelemetryMessage> m_commandHistory;
     std::vector<DroneTelemetry> m_telemetryHistory;
 

@@ -168,7 +168,18 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: \
  /usr/include/c++/15/pstl/execution_defs.h /usr/include/c++/15/vector \
  /usr/include/c++/15/bits/stl_vector.h \
  /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc /usr/include/boost/json.hpp \
+ /usr/include/c++/15/bits/vector.tcc \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h \
+ /usr/include/c++/15/map /usr/include/c++/15/bits/stl_tree.h \
+ /usr/include/c++/15/bits/node_handle.h \
+ /usr/include/c++/15/bits/stl_map.h \
+ /usr/include/c++/15/bits/stl_multimap.h \
+ /usr/include/c++/15/bits/erase_if.h /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/bits/enable_special_members.h \
+ /usr/include/c++/15/ctime /usr/include/boost/json.hpp \
  /usr/include/boost/json/detail/config.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -294,14 +305,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: \
  /usr/include/boost/system/detail/error_category.hpp \
  /usr/include/boost/system/detail/config.hpp \
  /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/unordered_map \
- /usr/include/c++/15/bits/unordered_map.h \
- /usr/include/c++/15/bits/hashtable.h \
- /usr/include/c++/15/bits/hashtable_policy.h \
- /usr/include/c++/15/bits/enable_special_members.h \
- /usr/include/c++/15/bits/node_handle.h \
- /usr/include/c++/15/bits/erase_if.h /usr/include/c++/15/array \
- /usr/include/c++/15/compare \
+ /usr/include/c++/15/array /usr/include/c++/15/compare \
  /usr/include/boost/system/detail/error_condition.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/generic_category_message.hpp \
@@ -321,8 +325,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: \
  /usr/include/boost/system/detail/std_category_impl.hpp \
  /usr/include/boost/system/detail/mutex.hpp /usr/include/c++/15/mutex \
  /usr/include/c++/15/bits/chrono.h /usr/include/c++/15/ratio \
- /usr/include/c++/15/limits /usr/include/c++/15/ctime \
- /usr/include/c++/15/bits/parse_numbers.h \
+ /usr/include/c++/15/limits /usr/include/c++/15/bits/parse_numbers.h \
  /usr/include/c++/15/bits/std_mutex.h \
  /usr/include/c++/15/bits/unique_lock.h \
  /usr/include/boost/system/system_error.hpp \

@@ -12,6 +12,7 @@ public:
 
     // Handles POST /api/v1/missions/launch
     std::pair<int, boost::json::value> handleLaunchMission(const std::string& requestBody);
+    std::pair<int, boost::json::value> handleGetMissionHistory();
 
     // Handles GET /api/v1/bunker/status
     std::pair<int, boost::json::value> handleGetBunkerStatus();

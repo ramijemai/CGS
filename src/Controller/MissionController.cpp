@@ -11,17 +11,11 @@ std::pair<int, bj::value> MissionController::handleLaunchMission(const std::stri
         bj::value parsed = bj::parse(requestBody);
         const auto& obj = parsed.as_object();
 
-        // to_number<double>() accepts both "100" (int64) and "100.0" (double) from JSON.
-        // as_double() would throw on the former, rejecting perfectly valid requests.
         GpsCoordinate target{
             obj.at("latitude").to_number<double>(),
             obj.at("longitude").to_number<double>(),
             obj.at("altitude").to_number<double>()
         };
-
-        // NOTE: renamed from "durationSeconds" -> "cruiseAltitude" to match what
-        // MissionPlanner::planAndExecuteInspection actually expects as its 2nd param.
-        // The old field name was silently feeding a duration value in as an altitude.
         double cruiseAltitude = obj.at("cruiseAltitude").to_number<double>();
 
         std::string requestedDroneId;
@@ -62,17 +56,50 @@ std::pair<int, bj::value> MissionController::handleGetBunkerStatus() {
     return {200, bj::object{{"slots", slotsArray}}};
 }
 
+
+
+namespace {
+    std::string formatLaunchTime(std::time_t t) {
+        char buf[6];
+        std::tm tmv{};
+        localtime_r(&t, &tmv);
+        std::strftime(buf, sizeof(buf), "%H:%M", &tmv);
+        return std::string(buf);
+    }
+}
+
 std::pair<int, bj::value> MissionController::handleGetActiveMissions() {
     bj::array missionsArray;
 
     for (const auto& mission : planner_.getActiveMissions()) {
         missionsArray.push_back(bj::object{
+            {"missionId", mission.missionId},
             {"droneId", mission.droneId},
             {"status", mission.status},
             {"target", bj::object{{"latitude", mission.target.latitude},
                                    {"longitude", mission.target.longitude},
                                    {"altitude", mission.target.altitude}}},
-            {"cruiseAltitude", mission.cruiseAltitude}
+            {"cruiseAltitude", mission.cruiseAltitude},
+            {"launchTime", formatLaunchTime(mission.launchTime)}
+        });
+    }
+
+    return {200, bj::object{{"missions", missionsArray}}};
+}
+
+std::pair<int, bj::value> MissionController::handleGetMissionHistory() {
+    bj::array missionsArray;
+
+    for (const auto& mission : planner_.getMissionHistory()) {
+        missionsArray.push_back(bj::object{
+            {"missionId", mission.missionId},
+            {"droneId", mission.droneId},
+            {"status", mission.status},
+            {"target", bj::object{{"latitude", mission.target.latitude},
+                                   {"longitude", mission.target.longitude},
+                                   {"altitude", mission.target.altitude}}},
+            {"cruiseAltitude", mission.cruiseAltitude},
+            {"launchTime", formatLaunchTime(mission.launchTime)}
         });
     }
 

@@ -39,6 +39,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -340,10 +341,13 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
  /usr/include/c++/15/bits/stl_iterator.h
  /usr/include/c++/15/bits/stl_iterator_base_funcs.h
  /usr/include/c++/15/bits/stl_iterator_base_types.h
+ /usr/include/c++/15/bits/stl_map.h
+ /usr/include/c++/15/bits/stl_multimap.h
  /usr/include/c++/15/bits/stl_pair.h
  /usr/include/c++/15/bits/stl_raw_storage_iter.h
  /usr/include/c++/15/bits/stl_relops.h
  /usr/include/c++/15/bits/stl_tempbuf.h
+ /usr/include/c++/15/bits/stl_tree.h
  /usr/include/c++/15/bits/stl_uninitialized.h
  /usr/include/c++/15/bits/stl_vector.h
  /usr/include/c++/15/bits/stream_iterator.h
@@ -394,6 +398,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
  /usr/include/c++/15/istream
  /usr/include/c++/15/iterator
  /usr/include/c++/15/limits
+ /usr/include/c++/15/map
  /usr/include/c++/15/memory
  /usr/include/c++/15/mutex
  /usr/include/c++/15/new
@@ -581,6 +586,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/RecoveryService.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h
  /usr/include/alloca.h
@@ -1829,6 +1835,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -1855,12 +1862,16 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/bits/cpp_type_traits.h
  /usr/include/c++/15/bits/cxxabi_forced.h
  /usr/include/c++/15/bits/cxxabi_init_exception.h
+ /usr/include/c++/15/bits/enable_special_members.h
+ /usr/include/c++/15/bits/erase_if.h
  /usr/include/c++/15/bits/exception.h
  /usr/include/c++/15/bits/exception_defines.h
  /usr/include/c++/15/bits/exception_ptr.h
  /usr/include/c++/15/bits/functexcept.h
  /usr/include/c++/15/bits/functional_hash.h
  /usr/include/c++/15/bits/hash_bytes.h
+ /usr/include/c++/15/bits/hashtable.h
+ /usr/include/c++/15/bits/hashtable_policy.h
  /usr/include/c++/15/bits/invoke.h
  /usr/include/c++/15/bits/ios_base.h
  /usr/include/c++/15/bits/istream.tcc
@@ -1874,6 +1885,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/bits/move.h
  /usr/include/c++/15/bits/nested_exception.h
  /usr/include/c++/15/bits/new_allocator.h
+ /usr/include/c++/15/bits/node_handle.h
  /usr/include/c++/15/bits/ostream.h
  /usr/include/c++/15/bits/ostream.tcc
  /usr/include/c++/15/bits/ostream_insert.h
@@ -1894,9 +1906,12 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/bits/stl_iterator.h
  /usr/include/c++/15/bits/stl_iterator_base_funcs.h
  /usr/include/c++/15/bits/stl_iterator_base_types.h
+ /usr/include/c++/15/bits/stl_map.h
+ /usr/include/c++/15/bits/stl_multimap.h
  /usr/include/c++/15/bits/stl_pair.h
  /usr/include/c++/15/bits/stl_raw_storage_iter.h
  /usr/include/c++/15/bits/stl_tempbuf.h
+ /usr/include/c++/15/bits/stl_tree.h
  /usr/include/c++/15/bits/stl_uninitialized.h
  /usr/include/c++/15/bits/stl_vector.h
  /usr/include/c++/15/bits/streambuf.tcc
@@ -1904,6 +1919,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/bits/string_view.tcc
  /usr/include/c++/15/bits/stringfwd.h
  /usr/include/c++/15/bits/unique_ptr.h
+ /usr/include/c++/15/bits/unordered_map.h
  /usr/include/c++/15/bits/uses_allocator.h
  /usr/include/c++/15/bits/uses_allocator_args.h
  /usr/include/c++/15/bits/utility.h
@@ -1916,6 +1932,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/cstddef
  /usr/include/c++/15/cstdio
  /usr/include/c++/15/cstdlib
+ /usr/include/c++/15/ctime
  /usr/include/c++/15/cwchar
  /usr/include/c++/15/cwctype
  /usr/include/c++/15/debug/assertions.h
@@ -1933,6 +1950,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/iosfwd
  /usr/include/c++/15/iostream
  /usr/include/c++/15/istream
+ /usr/include/c++/15/map
  /usr/include/c++/15/memory
  /usr/include/c++/15/new
  /usr/include/c++/15/ostream
@@ -1947,6 +1965,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o
  /usr/include/c++/15/tuple
  /usr/include/c++/15/type_traits
  /usr/include/c++/15/typeinfo
+ /usr/include/c++/15/unordered_map
  /usr/include/c++/15/vector
  /usr/include/ctype.h
  /usr/include/endian.h
@@ -2315,6 +2334,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o
  /usr/include/c++/15/bits/cpp_type_traits.h
  /usr/include/c++/15/bits/cxxabi_forced.h
  /usr/include/c++/15/bits/cxxabi_init_exception.h
+ /usr/include/c++/15/bits/enable_special_members.h
  /usr/include/c++/15/bits/erase_if.h
  /usr/include/c++/15/bits/exception.h
  /usr/include/c++/15/bits/exception_defines.h
@@ -2322,6 +2342,8 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o
  /usr/include/c++/15/bits/functexcept.h
  /usr/include/c++/15/bits/functional_hash.h
  /usr/include/c++/15/bits/hash_bytes.h
+ /usr/include/c++/15/bits/hashtable.h
+ /usr/include/c++/15/bits/hashtable_policy.h
  /usr/include/c++/15/bits/invoke.h
  /usr/include/c++/15/bits/ios_base.h
  /usr/include/c++/15/bits/istream.tcc
@@ -2378,6 +2400,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o
  /usr/include/c++/15/bits/stringfwd.h
  /usr/include/c++/15/bits/uniform_int_dist.h
  /usr/include/c++/15/bits/unique_ptr.h
+ /usr/include/c++/15/bits/unordered_map.h
  /usr/include/c++/15/bits/uses_allocator.h
  /usr/include/c++/15/bits/uses_allocator_args.h
  /usr/include/c++/15/bits/utility.h
@@ -2441,6 +2464,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o
  /usr/include/c++/15/tuple
  /usr/include/c++/15/type_traits
  /usr/include/c++/15/typeinfo
+ /usr/include/c++/15/unordered_map
  /usr/include/c++/15/vector
  /usr/include/ctype.h
  /usr/include/endian.h

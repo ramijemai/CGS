@@ -89,6 +89,12 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
         res.result(code);
         res.body() = boost::json::serialize(body);
     } 
+
+    else if (req.method() == http::verb::get && req.target() == "/api/v1/missions/history") {
+    auto [code, body] = missionCtrl.handleGetMissionHistory();
+    res.result(code);
+    res.body() = boost::json::serialize(body);
+}
     else {
         res.result(http::status::not_found);
         res.body() = R"({"error": "Endpoint not found"})";
@@ -105,19 +111,18 @@ int main() {
         // Initialize Core Services
         CapacityEngine bunkerEngine(3);
         auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
-        auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 50.0);
+        auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 95.0);
         droneAlpha->setCurrentLocation(bunker.getGpsLocation());
         droneBeta->setCurrentLocation(bunker.getGpsLocation());
         bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
         bunkerEngine.getSlot(2)->dockDrone(droneBeta);
         TelemetryManager telemetryManager;
-        MissionPlanner missionPlanner(bunkerEngine);
+        MissionPlanner missionPlanner(bunkerEngine, telemetryManager);
         RecoveryService recoveryService(bunkerEngine);
 
         // Instantiate Controllers
         MissionController missionController(missionPlanner, bunkerEngine);
-        TelemetryWebSocketController wsController(telemetryManager, recoveryService, bunkerEngine, bunker);
-        // Boost.Asio Listener Setup
+        TelemetryWebSocketController wsController(telemetryManager, recoveryService, bunkerEngine, bunker, missionPlanner);        
         asio::io_context ioc;
         tcp::acceptor acceptor(ioc, tcp::endpoint(tcp::v4(), 18080));
 

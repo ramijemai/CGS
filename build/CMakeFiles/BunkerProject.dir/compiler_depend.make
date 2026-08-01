@@ -37,6 +37,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/User
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -338,10 +339,13 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/User
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
   /usr/include/c++/15/bits/stl_pair.h \
   /usr/include/c++/15/bits/stl_raw_storage_iter.h \
   /usr/include/c++/15/bits/stl_relops.h \
   /usr/include/c++/15/bits/stl_tempbuf.h \
+  /usr/include/c++/15/bits/stl_tree.h \
   /usr/include/c++/15/bits/stl_uninitialized.h \
   /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/stream_iterator.h \
@@ -392,6 +396,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/User
   /usr/include/c++/15/istream \
   /usr/include/c++/15/iterator \
   /usr/include/c++/15/limits \
+  /usr/include/c++/15/map \
   /usr/include/c++/15/memory \
   /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
@@ -578,6 +583,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: 
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/RecoveryService.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h \
   /usr/include/alloca.h \
@@ -1821,6 +1827,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -1847,12 +1854,16 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
   /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/enable_special_members.h \
+  /usr/include/c++/15/bits/erase_if.h \
   /usr/include/c++/15/bits/exception.h \
   /usr/include/c++/15/bits/exception_defines.h \
   /usr/include/c++/15/bits/exception_ptr.h \
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/hashtable.h \
+  /usr/include/c++/15/bits/hashtable_policy.h \
   /usr/include/c++/15/bits/invoke.h \
   /usr/include/c++/15/bits/ios_base.h \
   /usr/include/c++/15/bits/istream.tcc \
@@ -1866,6 +1877,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/move.h \
   /usr/include/c++/15/bits/nested_exception.h \
   /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/node_handle.h \
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
@@ -1886,9 +1898,12 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_map.h \
+  /usr/include/c++/15/bits/stl_multimap.h \
   /usr/include/c++/15/bits/stl_pair.h \
   /usr/include/c++/15/bits/stl_raw_storage_iter.h \
   /usr/include/c++/15/bits/stl_tempbuf.h \
+  /usr/include/c++/15/bits/stl_tree.h \
   /usr/include/c++/15/bits/stl_uninitialized.h \
   /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
@@ -1896,6 +1911,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
   /usr/include/c++/15/bits/unique_ptr.h \
+  /usr/include/c++/15/bits/unordered_map.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
@@ -1908,6 +1924,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/cstddef \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -1925,6 +1942,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/map \
   /usr/include/c++/15/memory \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
@@ -1939,6 +1957,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/unordered_map \
   /usr/include/c++/15/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -2305,6 +2324,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
   /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/enable_special_members.h \
   /usr/include/c++/15/bits/erase_if.h \
   /usr/include/c++/15/bits/exception.h \
   /usr/include/c++/15/bits/exception_defines.h \
@@ -2312,6 +2332,8 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/hashtable.h \
+  /usr/include/c++/15/bits/hashtable_policy.h \
   /usr/include/c++/15/bits/invoke.h \
   /usr/include/c++/15/bits/ios_base.h \
   /usr/include/c++/15/bits/istream.tcc \
@@ -2368,6 +2390,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/stringfwd.h \
   /usr/include/c++/15/bits/uniform_int_dist.h \
   /usr/include/c++/15/bits/unique_ptr.h \
+  /usr/include/c++/15/bits/unordered_map.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
@@ -2431,6 +2454,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/unordered_map \
   /usr/include/c++/15/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -4404,10 +4428,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 
 /usr/include/boost/intrusive/bs_set_hook.hpp:
 
-/usr/include/c++/15/cstdio:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -4606,6 +4626,12 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 
 /usr/include/boost/json/impl/serializer.hpp:
 
+/usr/include/c++/15/map:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/c++/15/bits/refwrap.h:
+
 /usr/include/c++/15/limits:
 
 /usr/include/c++/15/iterator:
@@ -4657,6 +4683,8 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 /usr/include/c++/15/cstring:
 
 /usr/include/c++/15/cstdlib:
+
+/usr/include/c++/15/cstdio:
 
 /usr/include/c++/15/bits/stl_pair.h:
 
@@ -4769,6 +4797,14 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 /usr/include/boost/mp11/integer_sequence.hpp:
 
 /usr/include/c++/15/bits/stl_uninitialized.h:
+
+/usr/include/boost/type_traits/floating_point_promotion.hpp:
+
+/usr/include/boost/describe/bases.hpp:
+
+/usr/include/c++/15/bits/stl_multimap.h:
+
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h:
 
 /usr/include/c++/15/bits/shared_ptr_base.h:
 
@@ -5000,12 +5036,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /usr/include/boost/json/basic_parser.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/c++/15/unordered_map:
-
-/usr/include/boost/asio/detail/impl/socket_ops.ipp:
-
 /usr/include/boost/move/detail/placement_new.hpp:
 
 /usr/include/boost/core/detail/static_assert.hpp:
@@ -5102,6 +5132,16 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h:
 
+/usr/include/c++/15/array:
+
+/usr/include/boost/mp11/detail/mp_list.hpp:
+
+/usr/include/c++/15/bits/stl_bvector.h:
+
+/usr/include/boost/type_traits/copy_cv_ref.hpp:
+
+/usr/include/boost/system/detail/generic_category.hpp:
+
 /usr/include/boost/mp11/detail/mp_list_v.hpp:
 
 /usr/include/boost/type_traits/is_swappable.hpp:
@@ -5161,8 +5201,6 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o:
 /usr/include/boost/asio/detail/impl/posix_mutex.ipp:
 
 /usr/include/boost/container_hash/is_range.hpp:
-
-/usr/include/boost/system/detail/enable_if.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
@@ -5334,12 +5372,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/core/checked_delete.hpp:
 
-/usr/include/boost/type_traits/has_multiplies.hpp:
-
-/usr/include/c++/15/bits/ostream.tcc:
-
-/usr/include/boost/asio/detail/cstdint.hpp:
-
 /usr/include/boost/describe/members.hpp:
 
 /usr/include/c++/15/bits/unordered_map.h:
@@ -5350,19 +5382,21 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/beast/http/basic_file_body_fwd.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/c++/15/bits/refwrap.h:
-
-/usr/include/c++/15/map:
-
 /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o:
 
 /usr/include/linux/close_range.h:
 
+/usr/include/boost/asio/traits/prefer_member.hpp:
+
+/usr/include/boost/json/detail/sbo_buffer.hpp:
+
 /usr/include/c++/15/ctime:
 
 /usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/boost/asio/detail/array_fwd.hpp:
 
@@ -5398,13 +5432,17 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/move/detail/std_ns_end.hpp:
 
-/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h:
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
-/usr/include/boost/type_traits/floating_point_promotion.hpp:
+/usr/include/boost/json/detail/except.hpp:
 
-/usr/include/boost/describe/bases.hpp:
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h:
 
-/usr/include/c++/15/bits/stl_multimap.h:
+/usr/include/boost/asio/detail/op_queue.hpp:
+
+/usr/include/boost/beast/core/basic_stream.hpp:
+
+/usr/include/boost/move/detail/addressof.hpp:
 
 /usr/include/boost/intrusive/bstree.hpp:
 
@@ -5452,24 +5490,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/c++/15/bits/exception_defines.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/boost/json/detail/sbo_buffer.hpp:
-
-/usr/include/boost/asio/traits/prefer_member.hpp:
-
-/usr/include/c++/15/array:
-
-/usr/include/boost/mp11/detail/mp_list.hpp:
-
-/usr/include/c++/15/bits/stl_bvector.h:
-
-/usr/include/boost/type_traits/copy_cv_ref.hpp:
-
-/usr/include/boost/system/detail/generic_category.hpp:
-
 /usr/include/c++/15/bits/invoke.h:
 
 /usr/include/boost/container_hash/is_unordered_range.hpp:
@@ -5498,9 +5518,9 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/asio/impl/any_io_executor.ipp:
 
-/usr/include/boost/beast/core/tcp_stream.hpp:
-
 /usr/include/boost/config/workaround.hpp:
+
+/usr/include/boost/beast/core/tcp_stream.hpp:
 
 /usr/include/c++/15/atomic:
 
@@ -5613,6 +5633,8 @@ CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o:
 /usr/include/boost/config/user.hpp:
 
 /usr/include/boost/beast/core/detail/sha1.ipp:
+
+/usr/include/boost/system/detail/enable_if.hpp:
 
 /usr/include/features.h:
 
@@ -5766,10 +5788,6 @@ CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o:
 
 /usr/include/boost/move/core.hpp:
 
-/usr/include/boost/beast/core/basic_stream.hpp:
-
-/usr/include/boost/move/detail/addressof.hpp:
-
 /usr/include/boost/asio/detail/impl/thread_context.ipp:
 
 /usr/include/boost/asio/detail/initiate_dispatch.hpp:
@@ -5814,10 +5832,6 @@ CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o:
 
 /usr/include/boost/json/detail/stream.hpp:
 
-/usr/include/boost/asio/bind_executor.hpp:
-
-/usr/include/boost/mp11/detail/mp_is_list.hpp:
-
 /usr/include/boost/asio/detail/timer_scheduler_fwd.hpp:
 
 /usr/include/boost/mp11/detail/mp_is_value_list.hpp:
@@ -5860,6 +5874,10 @@ CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o:
 
 /usr/include/boost/asio/detail/handler_work.hpp:
 
+/usr/include/c++/15/bits/functional_hash.h:
+
+/usr/include/boost/system/is_error_condition_enum.hpp:
+
 /usr/include/boost/system/detail/append_int.hpp:
 
 /usr/include/boost/intrusive/detail/iiterator.hpp:
@@ -5880,9 +5898,23 @@ CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o:
 
 /usr/include/boost/system/detail/interop_category.hpp:
 
-/usr/include/c++/15/bits/functional_hash.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/boost/system/is_error_condition_enum.hpp:
+/usr/include/boost/mp11/detail/mp_is_list.hpp:
+
+/usr/include/boost/asio/bind_executor.hpp:
+
+/usr/include/c++/15/unordered_map:
+
+/usr/include/boost/asio/detail/impl/socket_ops.ipp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/boost/type_traits/has_multiplies.hpp:
+
+/usr/include/c++/15/bits/ostream.tcc:
+
+/usr/include/boost/asio/detail/cstdint.hpp:
 
 /usr/include/boost/beast/core/impl/file_posix.ipp:
 
@@ -5957,14 +5989,6 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o:
 /usr/include/boost/intrusive/detail/empty_node_checker.hpp:
 
 /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-/usr/include/boost/json/detail/except.hpp:
-
-/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h:
-
-/usr/include/boost/asio/detail/op_queue.hpp:
 
 /usr/include/boost/asio/yield.hpp:
 
