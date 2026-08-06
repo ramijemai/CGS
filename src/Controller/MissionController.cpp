@@ -1,7 +1,31 @@
 #include "Controller/MissionController.h"
+#include "Common/MissionPattern.h"
 #include <exception>
+#include <ctime>
 
 namespace bj = boost::json;
+
+namespace {
+    std::string missionPatternToString(MissionPattern pattern) {
+        switch (pattern) {
+            case MissionPattern::WAYPOINT_PATH: return "WAYPOINT_PATH";
+            case MissionPattern::SINGLE_POINT:
+            default:                             return "SINGLE_POINT";
+        }
+    }
+
+
+    std::string formatLaunchTime(std::time_t t) {
+        char buf[6];
+        std::tm tmv{};
+        localtime_r(&t, &tmv);
+        std::strftime(buf, sizeof(buf), "%H:%M", &tmv);
+        return std::string(buf);
+    }
+
+}
+    
+
 
 MissionController::MissionController(MissionPlanner& planner, CapacityEngine& capacityEngine)
     : planner_(planner), capacityEngine_(capacityEngine) {}
@@ -56,52 +80,85 @@ std::pair<int, bj::value> MissionController::handleGetBunkerStatus() {
     return {200, bj::object{{"slots", slotsArray}}};
 }
 
-
-
-namespace {
-    std::string formatLaunchTime(std::time_t t) {
-        char buf[6];
-        std::tm tmv{};
-        localtime_r(&t, &tmv);
-        std::strftime(buf, sizeof(buf), "%H:%M", &tmv);
-        return std::string(buf);
+bj::object MissionController::serializeMission(const ActiveMission& mission) const {
+    bj::array waypointsArray;
+    for (const auto& wp : mission.waypoints) {
+        waypointsArray.push_back(bj::object{
+            {"latitude", wp.latitude},
+            {"longitude", wp.longitude},
+            {"altitude", wp.altitude}
+        });
     }
+
+    return bj::object{
+        {"missionId", mission.missionId},
+        {"droneId", mission.droneId},
+        {"status", mission.status},
+        {"pattern", missionPatternToString(mission.pattern)},
+        {"target", bj::object{{"latitude", mission.target.latitude},
+                               {"longitude", mission.target.longitude},
+                               {"altitude", mission.target.altitude}}},
+        {"waypoints", waypointsArray},
+        {"currentWaypointIndex", static_cast<std::int64_t>(mission.currentWaypointIndex)},
+        {"cruiseAltitude", mission.cruiseAltitude},
+        {"launchTime", formatLaunchTime(mission.launchTime)}
+    };
 }
 
 std::pair<int, bj::value> MissionController::handleGetActiveMissions() {
     bj::array missionsArray;
-
     for (const auto& mission : planner_.getActiveMissions()) {
-        missionsArray.push_back(bj::object{
-            {"missionId", mission.missionId},
-            {"droneId", mission.droneId},
-            {"status", mission.status},
-            {"target", bj::object{{"latitude", mission.target.latitude},
-                                   {"longitude", mission.target.longitude},
-                                   {"altitude", mission.target.altitude}}},
-            {"cruiseAltitude", mission.cruiseAltitude},
-            {"launchTime", formatLaunchTime(mission.launchTime)}
-        });
+        missionsArray.push_back(serializeMission(mission));
     }
-
     return {200, bj::object{{"missions", missionsArray}}};
 }
 
 std::pair<int, bj::value> MissionController::handleGetMissionHistory() {
     bj::array missionsArray;
-
     for (const auto& mission : planner_.getMissionHistory()) {
-        missionsArray.push_back(bj::object{
-            {"missionId", mission.missionId},
-            {"droneId", mission.droneId},
-            {"status", mission.status},
-            {"target", bj::object{{"latitude", mission.target.latitude},
-                                   {"longitude", mission.target.longitude},
-                                   {"altitude", mission.target.altitude}}},
-            {"cruiseAltitude", mission.cruiseAltitude},
-            {"launchTime", formatLaunchTime(mission.launchTime)}
-        });
+        missionsArray.push_back(serializeMission(mission));
     }
-
     return {200, bj::object{{"missions", missionsArray}}};
+}
+
+std::pair<int, bj::value> MissionController::handleLaunchAreaScan(const std::string& requestBody) {
+    try {
+        bj::value parsed = bj::parse(requestBody);
+        const auto& obj = parsed.as_object();
+
+        if (!obj.contains("waypoints") || !obj.at("waypoints").is_array()) {
+            return {400, bj::object{{"status", "ERROR"}, {"message", "waypoints must be an array"}}};
+        }
+
+        AreaScanRequest request;
+        request.cruiseAltitude = obj.at("cruiseAltitude").to_number<double>();
+
+        for (const auto& wpVal : obj.at("waypoints").as_array()) {
+            const auto& wpObj = wpVal.as_object();
+            request.waypoints.push_back(GpsCoordinate{
+                wpObj.at("latitude").to_number<double>(),
+                wpObj.at("longitude").to_number<double>(),
+                0.0 // set uniformly from cruiseAltitude in MissionPlanner
+            });
+        }
+
+        if (request.waypoints.size() < 2) {
+            return {400, bj::object{{"status", "ERROR"}, {"message", "At least 2 waypoints are required"}}};
+        }
+
+        std::string requestedDroneId;
+        if (obj.contains("droneId")) {
+            requestedDroneId = bj::value_to<std::string>(obj.at("droneId"));
+        }
+
+        bool result = planner_.planAndExecuteAreaScan(request, requestedDroneId);
+
+        if (result) {
+            return {200, bj::object{{"status", "SUCCESS"}, {"message", "Waypoint path mission launched successfully."}}};
+        } else {
+            return {400, bj::object{{"status", "FAILED"}, {"message", "Launch requirements not met."}}};
+        }
+    } catch (const std::exception& e) {
+        return {400, bj::object{{"status", "ERROR"}, {"message", std::string("Invalid payload: ") + e.what()}}};
+    }
 }

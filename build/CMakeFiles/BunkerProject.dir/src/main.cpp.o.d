@@ -179,6 +179,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/c++/15/bits/hashtable_policy.h \
  /usr/include/c++/15/bits/enable_special_members.h \
  /usr/include/c++/15/ctime \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/RecoveryService.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h \

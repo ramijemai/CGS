@@ -95,6 +95,14 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
     res.result(code);
     res.body() = boost::json::serialize(body);
 }
+
+
+else if (req.method() == http::verb::post && req.target() == "/api/v1/missions/launch-scan") {
+    auto [code, body] = missionCtrl.handleLaunchAreaScan(req.body());
+    res.result(code);
+    res.body() = boost::json::serialize(body);
+}
+
     else {
         res.result(http::status::not_found);
         res.body() = R"({"error": "Endpoint not found"})";
@@ -106,7 +114,7 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
 
 int main() {
     try {
-                Bunker bunker({36.8065, 10.1815, 0.0});
+                Bunker bunker({36.773442, 10.285913, 0.0});
 
         // Initialize Core Services
         CapacityEngine bunkerEngine(3);
