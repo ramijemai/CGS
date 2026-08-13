@@ -5,6 +5,7 @@
 #include <map>
 #include <unordered_map>
 #include <memory>
+#include <mutex>
 #include <string>
 #include <vector>
 #include <ctime>
@@ -92,6 +93,7 @@ private:
     std::unordered_map<std::string, std::shared_ptr<Drone>> m_droneRegistry;
     std::vector<TelemetryMessage> m_commandHistory;
     std::vector<DroneTelemetry> m_telemetryHistory;
+    mutable std::mutex m_mutex;
 
     void trimHistory();
 };

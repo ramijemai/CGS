@@ -1,4 +1,5 @@
 #include "Controller/TelemetryWebSocketController.h"
+#include "Common/DroneStateUtils.h"
 #include <exception>
 
 namespace bj = boost::json;
@@ -6,18 +7,8 @@ namespace bj = boost::json;
 namespace {
     // Adjust these to match the real bounds of your DroneCommand enum.
     constexpr int64_t kMinCommandCode = 0;
-    constexpr int64_t kMaxCommandCode = 3;
+    constexpr int64_t kMaxCommandCode = 4;
 
-    // Adjust to match the actual DroneState enum members in Domain/Drone.h
-    std::string droneStateToString(DroneState state) {
-        switch (state) {
-            case DroneState::InFlight:          return "IN_FLIGHT";
-            case DroneState::ReturningToBunker:  return "RETURNING";
-            case DroneState::Landing:            return "LANDING";
-            case DroneState::Fault:              return "FAULT";
-            default:                              return "DOCKED";
-        }
-    }
 }
 
 TelemetryWebSocketController::TelemetryWebSocketController(TelemetryManager& telemetry,
@@ -32,15 +23,11 @@ TelemetryWebSocketController::TelemetryWebSocketController(TelemetryManager& tel
     , missionPlanner_(missionPlanner) {}
 
 std::shared_ptr<Drone> TelemetryWebSocketController::findDroneById(const std::string& droneId) const {
-    // Check docked bays first — covers drones that never launched, or that
-    // have already been recovered and re-docked.
     for (const auto& slot : capacityEngine_.getAllSlots()) {
-        if (slot->isOccupied() && slot->getDrone()->getId() == droneId) {
-            return slot->getDrone();
+        if (auto drone = slot->getDroneIfOccupied(); drone && drone->getId() == droneId) {
+            return drone;
         }
     }
-    // Fall back to the active-telemetry registry — covers in-flight drones,
-    // now that MissionPlanner registers them on dispatch.
     return telemetryManager_.getActiveDronePtr(droneId);
 }
 
@@ -141,7 +128,7 @@ void TelemetryWebSocketController::broadcastTelemetry(SendTextCallback broadcast
             {"batteryLevel", telem.batteryLevel},
             {"speed", telem.speed},
             {"heading", telem.heading},
-            {"state", droneStateToString(telem.state)}
+            {"state", DroneStateUtils::toString(telem.state)}
         });
     }
 

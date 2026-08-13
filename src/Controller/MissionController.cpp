@@ -2,6 +2,7 @@
 #include "Common/MissionPattern.h"
 #include <exception>
 #include <ctime>
+#include "Common/DroneStateUtils.h"
 
 namespace bj = boost::json;
 
@@ -62,20 +63,20 @@ std::pair<int, bj::value> MissionController::handleLaunchMission(const std::stri
 std::pair<int, bj::value> MissionController::handleGetBunkerStatus() {
     bj::array slotsArray;
 
-    for (const auto& slot : capacityEngine_.getAllSlots()) {
-        bj::object slotJson;
-        slotJson["slotId"] = slot->getSlotId();
-        slotJson["isOccupied"] = slot->isOccupied();
+for (const auto& slot : capacityEngine_.getAllSlots()) {
+    bj::object slotJson;
+    slotJson["slotId"] = slot->getSlotId();
+    slotJson["isOccupied"] = slot->isOccupied();
 
-        if (slot->isOccupied()) {
-            const auto drone = slot->getDrone();
-            slotJson["drone"] = bj::object{
-                {"id", drone->getId()},
-                {"batteryLevel", drone->getBatteryLevel()}
-            };
-        }
-        slotsArray.push_back(slotJson);
+    if (auto drone = slot->getDroneIfOccupied()) {
+        slotJson["drone"] = bj::object{
+            {"id", drone->getId()},
+            {"batteryLevel", drone->getBatteryLevel()},
+            {"state", DroneStateUtils::toString(drone->getState())}
+        };
     }
+    slotsArray.push_back(slotJson);
+}
 
     return {200, bj::object{{"slots", slotsArray}}};
 }
@@ -90,6 +91,12 @@ bj::object MissionController::serializeMission(const ActiveMission& mission) con
         });
     }
 
+    std::int64_t durationSeconds = 0;
+if (mission.completionTime > 0 && mission.launchTime > 0) {
+    durationSeconds = static_cast<std::int64_t>(mission.completionTime - mission.launchTime);
+}
+
+
     return bj::object{
         {"missionId", mission.missionId},
         {"droneId", mission.droneId},
@@ -101,7 +108,9 @@ bj::object MissionController::serializeMission(const ActiveMission& mission) con
         {"waypoints", waypointsArray},
         {"currentWaypointIndex", static_cast<std::int64_t>(mission.currentWaypointIndex)},
         {"cruiseAltitude", mission.cruiseAltitude},
-        {"launchTime", formatLaunchTime(mission.launchTime)}
+        {"launchTime", formatLaunchTime(mission.launchTime)},
+        {"durationSeconds", durationSeconds}  
+
     };
 }
 

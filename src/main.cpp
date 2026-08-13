@@ -4,7 +4,7 @@
 #include "Services/TelemetryManager.h"
 #include "Controller/MissionController.h"
 #include "Controller/TelemetryWebSocketController.h"
-
+#include "Controller/DroneSimulator.h"
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
@@ -114,9 +114,26 @@ else if (req.method() == http::verb::post && req.target() == "/api/v1/missions/l
 
 int main() {
     try {
-                Bunker bunker({36.773442, 10.285913, 0.0});
+     /*   Bunker bunker({36.773442, 10.285913, 0.0});
 
         // Initialize Core Services
+        CapacityEngine bunkerEngine(3);
+        auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
+        auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 95.0);
+        auto droneTeta  = std::make_shared<Drone>("DRONE-TETA", 15.0);
+        droneAlpha->setCurrentLocation(bunker.getGpsLocation());
+        droneBeta->setCurrentLocation(bunker.getGpsLocation());
+        droneTeta->setCurrentLocation(bunker.getGpsLocation());
+        //make the drone defected : 
+        bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
+        bunkerEngine.getSlot(2)->dockDrone(droneBeta);
+        bunkerEngine.getSlot(3)->dockDrone(droneTeta);
+        droneTeta->setState(DroneState::Fault);
+
+*/
+
+        Bunker bunker({36.773442, 10.285913, 0.0});
+
         CapacityEngine bunkerEngine(3);
         auto droneAlpha = std::make_shared<Drone>("DRONE-ALPHA", 100.0);
         auto droneBeta  = std::make_shared<Drone>("DRONE-BETA", 95.0);
@@ -124,8 +141,20 @@ int main() {
         droneBeta->setCurrentLocation(bunker.getGpsLocation());
         bunkerEngine.getSlot(1)->dockDrone(droneAlpha);
         bunkerEngine.getSlot(2)->dockDrone(droneBeta);
+
         TelemetryManager telemetryManager;
         MissionPlanner missionPlanner(bunkerEngine, telemetryManager);
+
+        // Initialize and start the dynamic drone movement simulator in the background
+        DroneSimulator simulator(missionPlanner, telemetryManager, droneAlpha, 15.0);
+        DroneSimulator simulator2(missionPlanner, telemetryManager, droneBeta, 10.0);
+        
+        simulator.start();
+        simulator2.start();
+
+
+       // TelemetryManager telemetryManager;
+      //  MissionPlanner missionPlanner(bunkerEngine, telemetryManager);
         RecoveryService recoveryService(bunkerEngine);
 
         // Instantiate Controllers

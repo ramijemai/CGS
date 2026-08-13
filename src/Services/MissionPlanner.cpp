@@ -1,6 +1,7 @@
 #include "Services/MissionPlanner.h"
 #include <iostream>
 #include <algorithm>
+#include <mutex>
 
 MissionPlanner::MissionPlanner(CapacityEngine& capacityEngine, TelemetryManager& telemetryManager)
     : m_capacityEngine(capacityEngine), m_telemetryManager(telemetryManager) {}
@@ -52,67 +53,23 @@ std::shared_ptr<Drone> MissionPlanner::selectAndUndockDrone(const std::string& r
 void MissionPlanner::finalizeDispatch(const std::shared_ptr<Drone>& drone, ActiveMission mission) {
     drone->setState(DroneState::InFlight);
 
-    mission.missionId = "M-" + std::to_string(m_nextMissionId++);
     mission.droneId = drone->getId();
     mission.launchTime = std::time(nullptr);
     if (!mission.waypoints.empty()) {
         mission.target = mission.waypoints.front();
     }
 
+    {
+        std::lock_guard<std::mutex> lock(m_mutex);
+        mission.missionId = "M-" + std::to_string(m_nextMissionId++);
+        m_activeMissions.push_back(mission);
+    }
+
     std::cout << "[MISSION PLANNER] Mission '" << mission.missionId << "' dispatched — "
               << mission.waypoints.size() << " waypoint(s), cruise altitude "
               << mission.cruiseAltitude << "m.\n";
 
-    m_activeMissions.push_back(mission);
     m_telemetryManager.registerActiveDrone(drone, drone->getCurrentLocation());
-}
-
-bool MissionPlanner::advanceMissionWaypoint(const std::string& droneId) {
-    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
-                           [&](const ActiveMission& mission) {
-                               return mission.droneId == droneId;
-                           });
-
-    if (it == m_activeMissions.end()) {
-        return false;
-    }
-
-    if (it->waypoints.empty()) {
-        return false;
-    }
-
-    if (it->currentWaypointIndex + 1 < it->waypoints.size()) {
-        ++it->currentWaypointIndex;
-        it->target = it->waypoints.at(it->currentWaypointIndex);
-        return true;
-    }
-
-    return false;
-}
-
-bool MissionPlanner::completeMission(const std::string& droneId, const std::string& outcome) {
-    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
-                           [&](const ActiveMission& mission) {
-                               return mission.droneId == droneId;
-                           });
-
-    if (it == m_activeMissions.end()) {
-        return false;
-    }
-
-    ActiveMission completed = *it;
-    completed.status = outcome;
-    m_activeMissions.erase(it);
-    m_missionHistory.push_back(completed);
-    return true;
-}
-
-const std::vector<ActiveMission>& MissionPlanner::getActiveMissions() const {
-    return m_activeMissions;
-}
-
-const std::vector<ActiveMission>& MissionPlanner::getMissionHistory() const {
-    return m_missionHistory;
 }
 
 bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target,
@@ -148,9 +105,7 @@ bool MissionPlanner::planAndExecuteAreaScan(const AreaScanRequest& request,
     }
 
     std::vector<GpsCoordinate> waypoints = request.waypoints;
-    for (auto& wp : waypoints) {
-        wp.altitude = request.cruiseAltitude;
-    }
+    for (auto& wp : waypoints) wp.altitude = request.cruiseAltitude;
 
     auto drone = selectAndUndockDrone(requestedDroneId);
     if (!drone) return false;
@@ -162,5 +117,50 @@ bool MissionPlanner::planAndExecuteAreaScan(const AreaScanRequest& request,
     mission.status = "ACTIVE";
 
     finalizeDispatch(drone, mission);
+    return true;
+}
+
+bool MissionPlanner::advanceMissionWaypoint(const std::string& droneId) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+        [&](const ActiveMission& m) { return m.droneId == droneId && m.status == "ACTIVE"; });
+
+    if (it == m_activeMissions.end()) return false;
+    if (it->isFinalWaypoint()) return false;
+
+    it->currentWaypointIndex++;
+    return true;
+}
+
+bool MissionPlanner::completeMission(const std::string& droneId, const std::string& outcome) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+        [&](const ActiveMission& m) { return m.droneId == droneId && m.status == "ACTIVE"; });
+
+    if (it == m_activeMissions.end()) return false;
+
+    it->status = outcome;
+    it->completionTime = std::time(nullptr);
+    m_missionHistory.push_back(*it);
+    m_activeMissions.erase(it);
+    return true;
+}
+
+std::vector<ActiveMission> MissionPlanner::getActiveMissions() const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    return m_activeMissions;
+}
+
+std::vector<ActiveMission> MissionPlanner::getMissionHistory() const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    return m_missionHistory;
+}
+
+bool MissionPlanner::getActiveMissionSnapshot(const std::string& droneId, ActiveMission& out) const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+        [&](const ActiveMission& m) { return m.droneId == droneId && m.status == "ACTIVE"; });
+    if (it == m_activeMissions.end()) return false;
+    out = *it;
     return true;
 }

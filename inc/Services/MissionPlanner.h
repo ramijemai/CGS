@@ -4,13 +4,14 @@
 #include "Common/Types.h"
 #include "Common/MissionPattern.h"
 #include <ctime>
+#include <mutex>
 #include <string>
 #include <vector>
 
 struct ActiveMission {
     std::string missionId;
     std::string droneId;
-    GpsCoordinate target;   // SINGLE_POINT: the only point. WAYPOINT_PATH: waypoints[0], kept in sync.
+    GpsCoordinate target;
 
     MissionPattern pattern{MissionPattern::SINGLE_POINT};
     std::vector<GpsCoordinate> waypoints;
@@ -19,6 +20,7 @@ struct ActiveMission {
     double cruiseAltitude{0.0};
     std::string status{"ACTIVE"};
     std::time_t launchTime{0};
+    std::time_t completionTime{0};
 
     const GpsCoordinate& currentTarget() const {
         return waypoints.empty() ? target : waypoints.at(currentWaypointIndex);
@@ -28,9 +30,6 @@ struct ActiveMission {
     }
 };
 
-// Explicit, client-supplied waypoint path — no server-side generation.
-// The client (map click sequence) already produced the ordered points;
-// cruiseAltitude is applied uniformly to all of them.
 struct AreaScanRequest {
     std::vector<GpsCoordinate> waypoints;
     double cruiseAltitude{0.0};
@@ -50,8 +49,16 @@ public:
     bool advanceMissionWaypoint(const std::string& droneId);
     bool completeMission(const std::string& droneId, const std::string& outcome = "COMPLETED");
 
-    const std::vector<ActiveMission>& getActiveMissions() const;
-    const std::vector<ActiveMission>& getMissionHistory() const;
+    // Now return copies, not references — callers on other threads
+    // (MissionController serializing to JSON, DroneSimulator) can no
+    // longer race a concurrent push_back/erase.
+    std::vector<ActiveMission> getActiveMissions() const;
+    std::vector<ActiveMission> getMissionHistory() const;
+
+    // Thread-safe single-mission lookup for DroneSimulator — copies the
+    // matching ACTIVE mission into `out`. Never hands out a pointer/
+    // reference into internal state.
+    bool getActiveMissionSnapshot(const std::string& droneId, ActiveMission& out) const;
 
 private:
     CapacityEngine& m_capacityEngine;
@@ -59,6 +66,7 @@ private:
     std::vector<ActiveMission> m_activeMissions;
     std::vector<ActiveMission> m_missionHistory;
     int m_nextMissionId{900};
+    mutable std::mutex m_mutex;   // guards m_activeMissions / m_missionHistory / m_nextMissionId
 
     std::shared_ptr<Drone> selectAndUndockDrone(const std::string& requestedDroneId);
     void finalizeDispatch(const std::shared_ptr<Drone>& drone, ActiveMission mission);

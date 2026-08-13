@@ -31,6 +31,7 @@ BunkerProject: /lib64/ld-linux-x86-64.so.2 \
   CMakeFiles/BunkerProject.dir/src/main.cpp.o
 
 CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h \
@@ -578,6 +579,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/User
   /usr/lib/gcc/x86_64-linux-gnu/15/include/xmmintrin.h
 
 CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/TelemetryWebSocketController.cpp \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/TelemetryWebSocketController.h \
@@ -1150,6 +1152,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -1168,6 +1171,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/bits/nested_exception.h \
   /usr/include/c++/15/bits/new_allocator.h \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -1178,6 +1182,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/bits/shared_ptr_atomic.h \
   /usr/include/c++/15/bits/shared_ptr_base.h \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
@@ -1190,6 +1195,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/bits/stl_uninitialized.h \
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/unique_ptr.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
@@ -1200,8 +1206,10 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/debug/assertions.h \
   /usr/include/c++/15/debug/debug.h \
@@ -1215,11 +1223,14 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/c++/15/ext/type_traits.h \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/memory \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_memory_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/string \
   /usr/include/c++/15/string_view \
   /usr/include/c++/15/tuple \
@@ -1239,6 +1250,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -1266,6 +1278,8 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -1311,6 +1325,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
@@ -1321,7 +1336,8 @@ CMakeFiles/BunkerProject.dir/src/Domain/BaySlot.cpp.o: /mnt/c/Users/Victus/Deskt
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/BunkerProject.dir/src/Domain/Bunker.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Domain/Bunker.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
@@ -1471,8 +1487,12 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
   /usr/include/c++/15/algorithm \
   /usr/include/c++/15/backward/binders.h \
   /usr/include/c++/15/bit \
@@ -1483,6 +1503,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -1498,6 +1519,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /usr/include/c++/15/bits/move.h \
   /usr/include/c++/15/bits/new_allocator.h \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -1505,6 +1527,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /usr/include/c++/15/bits/refwrap.h \
   /usr/include/c++/15/bits/requires_hosted.h \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_construct.h \
@@ -1519,6 +1542,7 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
   /usr/include/c++/15/bits/uniform_int_dist.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
@@ -1528,203 +1552,32 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o: /mnt/c/Users/Victus/Desktop
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/debug/assertions.h \
   /usr/include/c++/15/debug/debug.h \
   /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
   /usr/include/c++/15/ext/numeric_traits.h \
   /usr/include/c++/15/ext/string_conversions.h \
   /usr/include/c++/15/ext/type_traits.h \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/limits \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/string \
   /usr/include/c++/15/string_view \
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/utility \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/errno.h \
-  /usr/include/locale.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
-  /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
-
-CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/CapacityEngine.cpp \
-  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
-  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h \
-  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
-  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/c++/15/backward/auto_ptr.h \
-  /usr/include/c++/15/backward/binders.h \
-  /usr/include/c++/15/bit \
-  /usr/include/c++/15/bits/align.h \
-  /usr/include/c++/15/bits/alloc_traits.h \
-  /usr/include/c++/15/bits/allocated_ptr.h \
-  /usr/include/c++/15/bits/allocator.h \
-  /usr/include/c++/15/bits/atomic_base.h \
-  /usr/include/c++/15/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/15/bits/basic_string.h \
-  /usr/include/c++/15/bits/basic_string.tcc \
-  /usr/include/c++/15/bits/char_traits.h \
-  /usr/include/c++/15/bits/charconv.h \
-  /usr/include/c++/15/bits/concept_check.h \
-  /usr/include/c++/15/bits/cpp_type_traits.h \
-  /usr/include/c++/15/bits/cxxabi_forced.h \
-  /usr/include/c++/15/bits/cxxabi_init_exception.h \
-  /usr/include/c++/15/bits/exception.h \
-  /usr/include/c++/15/bits/exception_defines.h \
-  /usr/include/c++/15/bits/exception_ptr.h \
-  /usr/include/c++/15/bits/functexcept.h \
-  /usr/include/c++/15/bits/functional_hash.h \
-  /usr/include/c++/15/bits/hash_bytes.h \
-  /usr/include/c++/15/bits/invoke.h \
-  /usr/include/c++/15/bits/localefwd.h \
-  /usr/include/c++/15/bits/memory_resource.h \
-  /usr/include/c++/15/bits/memoryfwd.h \
-  /usr/include/c++/15/bits/move.h \
-  /usr/include/c++/15/bits/nested_exception.h \
-  /usr/include/c++/15/bits/new_allocator.h \
-  /usr/include/c++/15/bits/ostream_insert.h \
-  /usr/include/c++/15/bits/postypes.h \
-  /usr/include/c++/15/bits/predefined_ops.h \
-  /usr/include/c++/15/bits/ptr_traits.h \
-  /usr/include/c++/15/bits/range_access.h \
-  /usr/include/c++/15/bits/refwrap.h \
-  /usr/include/c++/15/bits/requires_hosted.h \
-  /usr/include/c++/15/bits/shared_ptr.h \
-  /usr/include/c++/15/bits/shared_ptr_atomic.h \
-  /usr/include/c++/15/bits/shared_ptr_base.h \
-  /usr/include/c++/15/bits/std_abs.h \
-  /usr/include/c++/15/bits/stl_algobase.h \
-  /usr/include/c++/15/bits/stl_bvector.h \
-  /usr/include/c++/15/bits/stl_construct.h \
-  /usr/include/c++/15/bits/stl_function.h \
-  /usr/include/c++/15/bits/stl_iterator.h \
-  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/15/bits/stl_iterator_base_types.h \
-  /usr/include/c++/15/bits/stl_pair.h \
-  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/15/bits/stl_tempbuf.h \
-  /usr/include/c++/15/bits/stl_uninitialized.h \
-  /usr/include/c++/15/bits/stl_vector.h \
-  /usr/include/c++/15/bits/string_view.tcc \
-  /usr/include/c++/15/bits/stringfwd.h \
-  /usr/include/c++/15/bits/unique_ptr.h \
-  /usr/include/c++/15/bits/uses_allocator.h \
-  /usr/include/c++/15/bits/uses_allocator_args.h \
-  /usr/include/c++/15/bits/utility.h \
-  /usr/include/c++/15/bits/vector.tcc \
-  /usr/include/c++/15/bits/version.h \
-  /usr/include/c++/15/cctype \
-  /usr/include/c++/15/cerrno \
-  /usr/include/c++/15/clocale \
-  /usr/include/c++/15/concepts \
-  /usr/include/c++/15/cstddef \
-  /usr/include/c++/15/cstdio \
-  /usr/include/c++/15/cstdlib \
-  /usr/include/c++/15/cwchar \
-  /usr/include/c++/15/debug/assertions.h \
-  /usr/include/c++/15/debug/debug.h \
-  /usr/include/c++/15/exception \
-  /usr/include/c++/15/ext/aligned_buffer.h \
-  /usr/include/c++/15/ext/alloc_traits.h \
-  /usr/include/c++/15/ext/atomicity.h \
-  /usr/include/c++/15/ext/concurrence.h \
-  /usr/include/c++/15/ext/numeric_traits.h \
-  /usr/include/c++/15/ext/string_conversions.h \
-  /usr/include/c++/15/ext/type_traits.h \
-  /usr/include/c++/15/initializer_list \
-  /usr/include/c++/15/iosfwd \
-  /usr/include/c++/15/memory \
-  /usr/include/c++/15/new \
-  /usr/include/c++/15/pstl/execution_defs.h \
-  /usr/include/c++/15/pstl/glue_memory_defs.h \
-  /usr/include/c++/15/pstl/pstl_config.h \
-  /usr/include/c++/15/string \
-  /usr/include/c++/15/string_view \
-  /usr/include/c++/15/tuple \
-  /usr/include/c++/15/type_traits \
-  /usr/include/c++/15/typeinfo \
-  /usr/include/c++/15/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -1739,6 +1592,7 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Vic
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -1766,6 +1620,8 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Vic
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -1811,6 +1667,7 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Vic
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
@@ -1821,7 +1678,224 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Vic
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
+
+CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/CapacityEngine.cpp \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/15/backward/auto_ptr.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/align.h \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocated_ptr.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/atomic_base.h \
+  /usr/include/c++/15/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/nested_exception.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/shared_ptr.h \
+  /usr/include/c++/15/bits/shared_ptr_atomic.h \
+  /usr/include/c++/15/bits/shared_ptr_base.h \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/15/bits/stl_tempbuf.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unique_lock.h \
+  /usr/include/c++/15/bits/unique_ptr.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
+  /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
+  /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
+  /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
+  /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/exception \
+  /usr/include/c++/15/ext/aligned_buffer.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/atomicity.h \
+  /usr/include/c++/15/ext/concurrence.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/limits \
+  /usr/include/c++/15/memory \
+  /usr/include/c++/15/mutex \
+  /usr/include/c++/15/new \
+  /usr/include/c++/15/pstl/execution_defs.h \
+  /usr/include/c++/15/pstl/glue_memory_defs.h \
+  /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/MissionPlanner.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
@@ -1855,6 +1929,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -1886,6 +1961,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -1896,6 +1972,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/shared_ptr_atomic.h \
   /usr/include/c++/15/bits/shared_ptr_base.h \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
@@ -1918,6 +1995,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
   /usr/include/c++/15/bits/uniform_int_dist.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/unique_ptr.h \
   /usr/include/c++/15/bits/unordered_map.h \
   /usr/include/c++/15/bits/uses_allocator.h \
@@ -1930,6 +2008,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/ctime \
@@ -1950,14 +2029,17 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/map \
   /usr/include/c++/15/memory \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15/pstl/glue_memory_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -1982,6 +2064,7 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -2010,6 +2093,8 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -2069,7 +2154,8 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o: /mnt/c/Users/Vic
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/RecoveryService.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
@@ -2100,6 +2186,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -2126,6 +2213,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -2136,6 +2224,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/bits/shared_ptr_atomic.h \
   /usr/include/c++/15/bits/shared_ptr_base.h \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
@@ -2152,6 +2241,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/unique_ptr.h \
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
@@ -2163,8 +2253,10 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -2182,12 +2274,15 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/memory \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_memory_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -2211,6 +2306,7 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -2239,6 +2335,8 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -2298,7 +2396,8 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o: /mnt/c/Users/Vi
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Services/TelemetryManager.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
@@ -2328,6 +2427,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
@@ -2363,6 +2463,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -2376,6 +2477,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/specfun.h \
   /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
@@ -2398,6 +2500,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/bits/string_view.tcc \
   /usr/include/c++/15/bits/stringfwd.h \
   /usr/include/c++/15/bits/uniform_int_dist.h \
+  /usr/include/c++/15/bits/unique_lock.h \
   /usr/include/c++/15/bits/unique_ptr.h \
   /usr/include/c++/15/bits/unordered_map.h \
   /usr/include/c++/15/bits/uses_allocator.h \
@@ -2411,6 +2514,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/cmath \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/ctime \
@@ -2436,12 +2540,14 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/c++/15/locale \
   /usr/include/c++/15/map \
   /usr/include/c++/15/memory \
+  /usr/include/c++/15/mutex \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/execution_defs.h \
   /usr/include/c++/15/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15/pstl/glue_memory_defs.h \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/sstream \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
@@ -2481,6 +2587,7 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -2519,6 +2626,8 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -2580,11 +2689,13 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o: /mnt/c/Users/V
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h
 
 CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/main.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/DroneSimulator.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/TelemetryWebSocketController.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h \
@@ -4440,6 +4551,8 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 
 /usr/include/boost/detail/workaround.hpp:
 
+/usr/include/boost/core/yield_primitives.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -4625,6 +4738,12 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 
 /usr/include/boost/endian/conversion.hpp:
+
+/usr/include/boost/type_traits/has_left_shift.hpp:
+
+/usr/include/boost/core/span.hpp:
+
+/usr/include/c++/15/pstl/execution_defs.h:
 
 /usr/include/linux/errno.h:
 
@@ -4926,6 +5045,16 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 
 /usr/include/boost/system/is_error_code_enum.hpp:
 
+/usr/include/boost/type_traits/is_swappable.hpp:
+
+/usr/include/boost/system/error_category.hpp:
+
+/usr/include/boost/mp11/version.hpp:
+
+/usr/include/boost/asio/detail/io_object_impl.hpp:
+
+/usr/include/boost/asio/ip/impl/address_v4.ipp:
+
 /usr/include/boost/asio/ip/address_v6.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
@@ -5112,12 +5241,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /usr/include/boost/beast/websocket/impl/accept.hpp:
 
-/usr/include/boost/asio/detail/reactive_null_buffers_op.hpp:
-
-/usr/include/boost/json/detail/charconv/from_chars.hpp:
-
-/usr/include/boost/asio/traits/static_query.hpp:
-
 /usr/include/boost/system/error_condition.hpp:
 
 /usr/include/boost/mp11/detail/mp_void.hpp:
@@ -5161,16 +5284,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 /usr/include/boost/system/detail/generic_category.hpp:
 
 /usr/include/boost/mp11/detail/mp_list_v.hpp:
-
-/usr/include/boost/type_traits/is_swappable.hpp:
-
-/usr/include/boost/system/error_category.hpp:
-
-/usr/include/boost/mp11/version.hpp:
-
-/usr/include/boost/asio/detail/io_object_impl.hpp:
-
-/usr/include/boost/asio/ip/impl/address_v4.ipp:
 
 /usr/include/boost/asio/detail/impl/epoll_reactor.hpp:
 
@@ -5448,6 +5561,14 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/asio/detail/array_fwd.hpp:
 
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h:
+
+/usr/include/c++/15/bits/hashtable.h:
+
+/usr/include/boost/container/container_fwd.hpp:
+
+/usr/include/boost/asio/detail/select_interrupter.hpp:
+
 /usr/include/boost/config/platform/linux.hpp:
 
 /usr/include/boost/config/detail/posix_features.hpp:
@@ -5644,6 +5765,12 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/asio/detail/conditionally_enabled_mutex.hpp:
 
+/usr/include/boost/asio/detail/reactive_null_buffers_op.hpp:
+
+/usr/include/boost/json/detail/charconv/from_chars.hpp:
+
+/usr/include/boost/asio/traits/static_query.hpp:
+
 /usr/include/boost/system/detail/enable_if.hpp:
 
 /usr/include/features.h:
@@ -5761,12 +5888,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 /usr/include/boost/json/value_stack.hpp:
 
 /usr/include/boost/json/pilfer.hpp:
-
-/usr/include/c++/15/bits/hashtable.h:
-
-/usr/include/boost/container/container_fwd.hpp:
-
-/usr/include/boost/asio/detail/select_interrupter.hpp:
 
 /usr/include/boost/json/serialize_options.hpp:
 
@@ -6051,6 +6172,8 @@ CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o:
 /usr/include/boost/beast/websocket/detail/pmd_extension.ipp:
 
 /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/main.cpp:
+
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/DroneSimulator.h:
 
 /usr/include/arpa/inet.h:
 
@@ -6796,12 +6919,6 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o:
 
 /usr/include/boost/beast/http/rfc7230.hpp:
 
-/usr/include/boost/type_traits/has_left_shift.hpp:
-
-/usr/include/c++/15/pstl/execution_defs.h:
-
-/usr/include/boost/core/span.hpp:
-
 /usr/include/boost/beast/http/serializer.hpp:
 
 /usr/include/c++/15/cwctype:
@@ -6947,5 +7064,3 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o:
 /usr/include/boost/core/launder.hpp:
 
 /usr/include/boost/core/pointer_traits.hpp:
-
-/usr/include/boost/core/yield_primitives.hpp:
