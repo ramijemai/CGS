@@ -1,10 +1,14 @@
 #include "Services/MissionPlanner.h"
+#include "Common/MissionPatternUtils.h"
 #include <iostream>
 #include <algorithm>
-#include <mutex>
 
-MissionPlanner::MissionPlanner(CapacityEngine& capacityEngine, TelemetryManager& telemetryManager)
-    : m_capacityEngine(capacityEngine), m_telemetryManager(telemetryManager) {}
+MissionPlanner::MissionPlanner(CapacityEngine& capacityEngine,
+                                TelemetryManager& telemetryManager,
+                                MissionRepository& missionRepository)
+    : m_capacityEngine(capacityEngine)
+    , m_telemetryManager(telemetryManager)
+    , m_missionRepository(missionRepository) {}
 
 std::shared_ptr<Drone> MissionPlanner::selectAndUndockDrone(const std::string& requestedDroneId) {
     std::shared_ptr<BaySlot> slot;
@@ -70,6 +74,16 @@ void MissionPlanner::finalizeDispatch(const std::shared_ptr<Drone>& drone, Activ
               << mission.cruiseAltitude << "m.\n";
 
     m_telemetryManager.registerActiveDrone(drone, drone->getCurrentLocation());
+
+    // NEW: persist the mission the instant it's dispatched.
+    m_missionRepository.recordMissionLaunch(
+        mission.missionId,
+        mission.droneId,
+        MissionPatternUtils::toString(mission.pattern),
+        mission.waypoints,
+        mission.cruiseAltitude,
+        mission.launchTime
+    );
 }
 
 bool MissionPlanner::planAndExecuteInspection(const GpsCoordinate& target,
@@ -133,16 +147,28 @@ bool MissionPlanner::advanceMissionWaypoint(const std::string& droneId) {
 }
 
 bool MissionPlanner::completeMission(const std::string& droneId, const std::string& outcome) {
-    std::lock_guard<std::mutex> lock(m_mutex);
-    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
-        [&](const ActiveMission& m) { return m.droneId == droneId && m.status == "ACTIVE"; });
+    std::string missionId;
+    std::time_t completionTime = std::time(nullptr);
 
-    if (it == m_activeMissions.end()) return false;
+    {
+        std::lock_guard<std::mutex> lock(m_mutex);
+        auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+            [&](const ActiveMission& m) { return m.droneId == droneId && m.status == "ACTIVE"; });
 
-    it->status = outcome;
-    it->completionTime = std::time(nullptr);
-    m_missionHistory.push_back(*it);
-    m_activeMissions.erase(it);
+        if (it == m_activeMissions.end()) return false;
+
+        it->status = outcome;
+        it->completionTime = completionTime;
+        missionId = it->missionId;
+        m_missionHistory.push_back(*it);
+        m_activeMissions.erase(it);
+    }
+
+    // NEW: persist the outcome. Deliberately called after releasing the
+    // lock above — the DB write doesn't need to hold up other threads
+    // waiting on mission state.
+    m_missionRepository.recordMissionCompletion(missionId, outcome, completionTime);
+
     return true;
 }
 

@@ -33,12 +33,14 @@ BunkerProject: /lib64/ld-linux-x86-64.so.2 \
 CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPatternUtils.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h \
+  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionRepository.h \
   /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -4441,8 +4443,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 
 /usr/include/boost/optional/detail/optional_swap.hpp:
 
-/usr/include/boost/optional/detail/optional_reference_spec.hpp:
-
 /usr/include/boost/optional/detail/optional_hash.hpp:
 
 /usr/include/boost/smart_ptr/make_shared.hpp:
@@ -4553,9 +4553,9 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 
 /usr/include/boost/core/yield_primitives.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+/usr/include/boost/core/pointer_traits.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/boost/core/noinit_adaptor.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -4706,6 +4706,8 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: /mnt/c/Users/Victus/Desktop/Project
 /usr/include/boost/beast/http/impl/status.ipp:
 
 /usr/include/c++/15/tr1/poly_hermite.tcc:
+
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPatternUtils.h:
 
 /usr/include/x86_64-linux-gnu/sys/epoll.h:
 
@@ -5055,6 +5057,12 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 
 /usr/include/boost/asio/ip/impl/address_v4.ipp:
 
+/usr/include/c++/15/string:
+
+/usr/include/boost/system/errc.hpp:
+
+/usr/include/boost/asio/detail/push_options.hpp:
+
 /usr/include/boost/asio/ip/address_v6.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
@@ -5217,16 +5225,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /usr/include/boost/json/impl/conversion.hpp:
 
-/usr/include/c++/15/string:
-
-/usr/include/boost/system/errc.hpp:
-
-/usr/include/boost/asio/detail/push_options.hpp:
-
-/usr/include/boost/describe/detail/void_t.hpp:
-
-/usr/include/boost/container/detail/workaround.hpp:
-
 /usr/include/boost/container/detail/variadic_templates_tools.hpp:
 
 /usr/include/boost/container/detail/type_traits.hpp:
@@ -5283,13 +5281,21 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /usr/include/boost/system/detail/generic_category.hpp:
 
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/usr/include/boost/asio/detail/impl/eventfd_select_interrupter.ipp:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/boost/beast/http/field.hpp:
+
+/usr/include/boost/move/detail/std_ns_begin.hpp:
+
+/usr/include/boost/asio/detail/conditionally_enabled_mutex.hpp:
+
+/usr/include/boost/config/platform/linux.hpp:
+
 /usr/include/boost/mp11/detail/mp_list_v.hpp:
-
-/usr/include/boost/asio/detail/impl/epoll_reactor.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h:
-
-/usr/include/boost/beast/core/impl/buffers_generator.hpp:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -5306,12 +5312,6 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o:
 /usr/include/boost/config/detail/suffix.hpp:
 
 /usr/include/boost/describe/modifiers.hpp:
-
-/usr/include/boost/json/detail/charconv/detail/from_chars_result.hpp:
-
-/usr/include/boost/intrusive/detail/generic_hook.hpp:
-
-/usr/include/boost/mp11/detail/mp_with_index.hpp:
 
 /usr/include/c++/15/bits/stl_heap.h:
 
@@ -5435,6 +5435,26 @@ CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o:
 
 /usr/include/boost/core/detail/sp_thread_yield.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/boost/container_hash/is_described_class.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
+
+/usr/include/boost/endian/detail/integral_by_size.hpp:
+
+/usr/include/boost/config/pragma_message.hpp:
+
+/usr/include/boost/intrusive/detail/parent_from_member.hpp:
+
+/usr/include/boost/asio/impl/deferred.hpp:
+
+/usr/include/boost/system/detail/system_category_impl.hpp:
+
+/usr/include/boost/json/string.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/eventfd.h:
 
 /usr/include/boost/type_traits/rank.hpp:
@@ -5485,9 +5505,23 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/beast/core/impl/error.ipp:
 
+/usr/include/boost/describe/detail/void_t.hpp:
+
+/usr/include/boost/container/detail/workaround.hpp:
+
 /usr/include/boost/json/detail/parse_into.hpp:
 
 /usr/include/boost/beast/websocket/impl/ping.hpp:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/boost/beast/core/detail/bind_continuation.hpp:
+
+/usr/include/boost/describe/enum_to_string.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/boost/asio/impl/io_context.ipp:
 
 /usr/include/boost/asio/impl/write.hpp:
 
@@ -5504,12 +5538,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 /usr/include/c++/15/bits/exception_defines.h:
 
 /usr/include/boost/beast/core/buffers_prefix.hpp:
-
-/usr/include/boost/config/detail/select_compiler_config.hpp:
-
-/usr/include/boost/asio/impl/io_context.ipp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/c++/15/random:
 
@@ -5569,8 +5597,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/asio/detail/select_interrupter.hpp:
 
-/usr/include/boost/config/platform/linux.hpp:
-
 /usr/include/boost/config/detail/posix_features.hpp:
 
 /usr/include/boost/system/detail/error_category_impl.hpp:
@@ -5607,10 +5633,6 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h:
 
-/usr/include/boost/json/string.hpp:
-
-/usr/include/boost/system/detail/system_category_impl.hpp:
-
 /usr/include/boost/intrusive/bstree.hpp:
 
 /usr/include/boost/asio/inline_executor.hpp:
@@ -5620,6 +5642,10 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 /usr/include/boost/asio/associated_executor.hpp:
 
 /usr/include/boost/asio/ip/basic_resolver.hpp:
+
+/usr/include/boost/optional/detail/optional_reference_spec.hpp:
+
+/mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionRepository.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
@@ -5666,6 +5692,16 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 /usr/include/boost/container_hash/is_unordered_range.hpp:
 
 /usr/include/boost/beast/core/buffers_generator.hpp:
+
+/usr/include/c++/15/bits/cpp_type_traits.h:
+
+/usr/include/boost/json/kind.hpp:
+
+/usr/include/boost/json/detail/charconv/chars_format.hpp:
+
+/usr/include/boost/asio/detail/throw_error.hpp:
+
+/usr/include/boost/core/detail/assert.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -5723,47 +5759,17 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/config/detail/cxx_composite.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/boost/intrusive/detail/generic_hook.hpp:
 
-/usr/include/boost/container_hash/is_described_class.hpp:
+/usr/include/boost/mp11/detail/mp_with_index.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/stat.h:
+/usr/include/boost/json/detail/charconv/detail/from_chars_result.hpp:
 
-/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
+/usr/include/boost/asio/detail/impl/epoll_reactor.hpp:
 
-/usr/include/boost/endian/detail/integral_by_size.hpp:
+/usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h:
 
-/usr/include/boost/config/pragma_message.hpp:
-
-/usr/include/boost/intrusive/detail/parent_from_member.hpp:
-
-/usr/include/boost/asio/impl/deferred.hpp:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/boost/describe/enum_to_string.hpp:
-
-/usr/include/boost/beast/core/detail/bind_continuation.hpp:
-
-/usr/include/c++/15/bits/cpp_type_traits.h:
-
-/usr/include/boost/json/detail/charconv/chars_format.hpp:
-
-/usr/include/boost/asio/detail/throw_error.hpp:
-
-/usr/include/boost/core/detail/assert.hpp:
-
-/usr/include/boost/json/kind.hpp:
-
-/usr/include/boost/asio/detail/impl/eventfd_select_interrupter.ipp:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/boost/beast/http/field.hpp:
-
-/usr/include/boost/move/detail/std_ns_begin.hpp:
-
-/usr/include/boost/asio/detail/conditionally_enabled_mutex.hpp:
+/usr/include/boost/beast/core/impl/buffers_generator.hpp:
 
 /usr/include/boost/asio/detail/reactive_null_buffers_op.hpp:
 
@@ -5895,13 +5901,13 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 
 /usr/include/boost/move/detail/pointer_element.hpp:
 
-/usr/include/boost/mp11/detail/mp_rename.hpp:
-
-/usr/include/boost/json/detail/charconv/detail/config.hpp:
-
 /usr/include/boost/type_traits/has_pre_decrement.hpp:
 
 /usr/include/boost/json/impl/parse_into.hpp:
+
+/usr/include/boost/mp11/detail/mp_rename.hpp:
+
+/usr/include/boost/json/detail/charconv/detail/config.hpp:
 
 /usr/include/boost/json/detail/value_to.hpp:
 
@@ -6024,6 +6030,10 @@ CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o:
 /usr/include/c++/15/system_error:
 
 /usr/include/boost/system/detail/interop_category.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket_type.h:
 
@@ -6793,8 +6803,6 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o:
 
 /usr/include/boost/beast/core/impl/flat_buffer.hpp:
 
-/usr/include/boost/core/noinit_adaptor.hpp:
-
 /usr/include/boost/beast/core/impl/multi_buffer.hpp:
 
 /usr/include/boost/beast/zlib/detail/window.hpp:
@@ -7062,5 +7070,3 @@ CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o:
 /usr/include/boost/asio/detail/base_from_completion_cond.hpp:
 
 /usr/include/boost/core/launder.hpp:
-
-/usr/include/boost/core/pointer_traits.hpp:

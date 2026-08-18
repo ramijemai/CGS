@@ -1,6 +1,7 @@
 #pragma once
 #include "Services/CapacityEngine.h"
 #include "Services/TelemetryManager.h"
+#include "Services/MissionRepository.h"
 #include "Common/Types.h"
 #include "Common/MissionPattern.h"
 #include <ctime>
@@ -37,7 +38,9 @@ struct AreaScanRequest {
 
 class MissionPlanner {
 public:
-    MissionPlanner(CapacityEngine& capacityEngine, TelemetryManager& telemetryManager);
+    MissionPlanner(CapacityEngine& capacityEngine,
+                   TelemetryManager& telemetryManager,
+                   MissionRepository& missionRepository);
 
     bool planAndExecuteInspection(const GpsCoordinate& target,
                                   double cruiseAltitude,
@@ -49,24 +52,18 @@ public:
     bool advanceMissionWaypoint(const std::string& droneId);
     bool completeMission(const std::string& droneId, const std::string& outcome = "COMPLETED");
 
-    // Now return copies, not references — callers on other threads
-    // (MissionController serializing to JSON, DroneSimulator) can no
-    // longer race a concurrent push_back/erase.
     std::vector<ActiveMission> getActiveMissions() const;
     std::vector<ActiveMission> getMissionHistory() const;
-
-    // Thread-safe single-mission lookup for DroneSimulator — copies the
-    // matching ACTIVE mission into `out`. Never hands out a pointer/
-    // reference into internal state.
     bool getActiveMissionSnapshot(const std::string& droneId, ActiveMission& out) const;
 
 private:
     CapacityEngine& m_capacityEngine;
     TelemetryManager& m_telemetryManager;
+    MissionRepository& m_missionRepository;
     std::vector<ActiveMission> m_activeMissions;
     std::vector<ActiveMission> m_missionHistory;
     int m_nextMissionId{900};
-    mutable std::mutex m_mutex;   // guards m_activeMissions / m_missionHistory / m_nextMissionId
+    mutable std::mutex m_mutex;
 
     std::shared_ptr<Drone> selectAndUndockDrone(const std::string& requestedDroneId);
     void finalizeDispatch(const std::shared_ptr<Drone>& drone, ActiveMission mission);

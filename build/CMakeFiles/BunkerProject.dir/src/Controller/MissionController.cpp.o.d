@@ -189,6 +189,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: \
  /usr/include/c++/15/bits/hashtable.h \
  /usr/include/c++/15/bits/hashtable_policy.h \
  /usr/include/c++/15/bits/enable_special_members.h \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionRepository.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
  /usr/include/boost/json.hpp /usr/include/boost/json/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -468,4 +469,5 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o: \
  /usr/include/c++/15/optional /usr/include/boost/json/value_to.hpp \
  /usr/include/boost/json/detail/value_to.hpp \
  /usr/include/boost/json/visit.hpp /usr/include/boost/json/impl/visit.hpp \
- /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPatternUtils.h

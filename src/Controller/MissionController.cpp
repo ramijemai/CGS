@@ -1,20 +1,13 @@
 #include "Controller/MissionController.h"
-#include "Common/MissionPattern.h"
+#include "Common/DroneStateUtils.h"
+#include "Common/MissionPatternUtils.h"
 #include <exception>
 #include <ctime>
-#include "Common/DroneStateUtils.h"
 
 namespace bj = boost::json;
 
 namespace {
-    std::string missionPatternToString(MissionPattern pattern) {
-        switch (pattern) {
-            case MissionPattern::WAYPOINT_PATH: return "WAYPOINT_PATH";
-            case MissionPattern::SINGLE_POINT:
-            default:                             return "SINGLE_POINT";
-        }
-    }
-
+   
 
     std::string formatLaunchTime(std::time_t t) {
         char buf[6];
@@ -101,7 +94,7 @@ if (mission.completionTime > 0 && mission.launchTime > 0) {
         {"missionId", mission.missionId},
         {"droneId", mission.droneId},
         {"status", mission.status},
-        {"pattern", missionPatternToString(mission.pattern)},
+        {"pattern", MissionPatternUtils::toString(mission.pattern)},
         {"target", bj::object{{"latitude", mission.target.latitude},
                                {"longitude", mission.target.longitude},
                                {"altitude", mission.target.altitude}}},

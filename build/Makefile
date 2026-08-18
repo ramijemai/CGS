@@ -297,6 +297,30 @@ src/Services/MissionPlanner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.s
 .PHONY : src/Services/MissionPlanner.cpp.s
 
+src/Services/MissionRepository.o: src/Services/MissionRepository.cpp.o
+.PHONY : src/Services/MissionRepository.o
+
+# target to build an object file
+src/Services/MissionRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.o
+.PHONY : src/Services/MissionRepository.cpp.o
+
+src/Services/MissionRepository.i: src/Services/MissionRepository.cpp.i
+.PHONY : src/Services/MissionRepository.i
+
+# target to preprocess a source file
+src/Services/MissionRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.i
+.PHONY : src/Services/MissionRepository.cpp.i
+
+src/Services/MissionRepository.s: src/Services/MissionRepository.cpp.s
+.PHONY : src/Services/MissionRepository.s
+
+# target to generate assembly for a file
+src/Services/MissionRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.s
+.PHONY : src/Services/MissionRepository.cpp.s
+
 src/Services/RecoveryService.o: src/Services/RecoveryService.cpp.o
 .PHONY : src/Services/RecoveryService.o
 
@@ -399,6 +423,9 @@ help:
 	@echo "... src/Services/MissionPlanner.o"
 	@echo "... src/Services/MissionPlanner.i"
 	@echo "... src/Services/MissionPlanner.s"
+	@echo "... src/Services/MissionRepository.o"
+	@echo "... src/Services/MissionRepository.i"
+	@echo "... src/Services/MissionRepository.s"
 	@echo "... src/Services/RecoveryService.o"
 	@echo "... src/Services/RecoveryService.i"
 	@echo "... src/Services/RecoveryService.s"

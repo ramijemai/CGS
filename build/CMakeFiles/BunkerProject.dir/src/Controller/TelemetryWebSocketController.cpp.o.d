@@ -191,6 +191,7 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o: 
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionRepository.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
  /usr/include/boost/json.hpp /usr/include/boost/json/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \

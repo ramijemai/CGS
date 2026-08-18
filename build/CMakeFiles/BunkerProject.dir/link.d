@@ -8,11 +8,13 @@ BunkerProject: \
   CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o \
   CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o \
   CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o \
+  CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.o \
   CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o \
   CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o \
   CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o \
   CMakeFiles/BunkerProject.dir/src/main.cpp.o \
   /usr/lib/x86_64-linux-gnu/libboost_json.so.1.90.0 \
+  /usr/lib/x86_64-linux-gnu/libsqlite3.so \
   /usr/lib/x86_64-linux-gnu/libboost_container.so.1.90.0 \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -60,6 +62,8 @@ CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o:
 
 CMakeFiles/BunkerProject.dir/src/Services/RecoveryService.cpp.o:
 
+CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.o:
+
 CMakeFiles/BunkerProject.dir/src/Services/TelemetryManager.cpp.o:
 
 CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o:
@@ -69,6 +73,8 @@ CMakeFiles/BunkerProject.dir/src/Controller/TelemetryWebSocketController.cpp.o:
 CMakeFiles/BunkerProject.dir/src/main.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libboost_json.so.1.90.0:
+
+/usr/lib/x86_64-linux-gnu/libsqlite3.so:
 
 /usr/lib/x86_64-linux-gnu/libboost_container.so.1.90.0:
 

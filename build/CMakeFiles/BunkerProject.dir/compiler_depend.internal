@@ -35,12 +35,14 @@ CMakeFiles/BunkerProject.dir/src/Controller/MissionController.cpp.o
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/src/Controller/MissionController.cpp
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/DroneStateUtils.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPatternUtils.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/Types.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/BaySlot.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Drone.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/CapacityEngine.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionPlanner.h
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MissionRepository.h
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/TelemetryManager.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h

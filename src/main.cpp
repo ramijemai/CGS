@@ -5,6 +5,7 @@
 #include "Controller/MissionController.h"
 #include "Controller/TelemetryWebSocketController.h"
 #include "Controller/DroneSimulator.h"
+#include "Services/MissionRepository.h"
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
@@ -143,7 +144,8 @@ int main() {
         bunkerEngine.getSlot(2)->dockDrone(droneBeta);
 
         TelemetryManager telemetryManager;
-        MissionPlanner missionPlanner(bunkerEngine, telemetryManager);
+        MissionRepository missionRepository("cgs_missions.db");
+        MissionPlanner missionPlanner(bunkerEngine, telemetryManager, missionRepository);
 
         // Initialize and start the dynamic drone movement simulator in the background
         DroneSimulator simulator(missionPlanner, telemetryManager, droneAlpha, 15.0);

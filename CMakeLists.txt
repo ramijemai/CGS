@@ -15,6 +15,7 @@ find_package(Threads REQUIRED)
 
 # Boost.System is header-only in Boost 1.89+, so we only need 'json' as a component
 find_package(Boost REQUIRED COMPONENTS json)
+find_package(SQLite3 REQUIRED)
 
 set(SOURCES
     src/Domain/Drone.cpp
@@ -23,6 +24,7 @@ set(SOURCES
     src/Services/CapacityEngine.cpp
     src/Services/MissionPlanner.cpp
     src/Services/RecoveryService.cpp
+    src/Services/MissionRepository.cpp
     src/Services/TelemetryManager.cpp
     src/Controller/MissionController.cpp
     src/Controller/TelemetryWebSocketController.cpp
@@ -41,9 +43,10 @@ target_compile_options(BunkerProject PRIVATE
     $<$<CXX_COMPILER_ID:MSVC>:/W4>
 )
 
-# Link header-only Boost targets, Boost.JSON, and system threads
+# Link header-only Boost targets, Boost.JSON, SQLite, and system threads
 target_link_libraries(BunkerProject PRIVATE
     Boost::headers
     Boost::json
+    SQLite::SQLite3
     Threads::Threads
 )
