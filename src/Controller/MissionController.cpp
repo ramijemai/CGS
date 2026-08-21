@@ -21,8 +21,8 @@ namespace {
     
 
 
-MissionController::MissionController(MissionPlanner& planner, CapacityEngine& capacityEngine)
-    : planner_(planner), capacityEngine_(capacityEngine) {}
+MissionController::MissionController(MissionPlanner& planner, CapacityEngine& capacityEngine, MissionRepository& missionRepository)
+    : planner_(planner), capacityEngine_(capacityEngine), missionRepository_(missionRepository) {}
 
 std::pair<int, bj::value> MissionController::handleLaunchMission(const std::string& requestBody) {
     try {
@@ -115,13 +115,6 @@ std::pair<int, bj::value> MissionController::handleGetActiveMissions() {
     return {200, bj::object{{"missions", missionsArray}}};
 }
 
-std::pair<int, bj::value> MissionController::handleGetMissionHistory() {
-    bj::array missionsArray;
-    for (const auto& mission : planner_.getMissionHistory()) {
-        missionsArray.push_back(serializeMission(mission));
-    }
-    return {200, bj::object{{"missions", missionsArray}}};
-}
 
 std::pair<int, bj::value> MissionController::handleLaunchAreaScan(const std::string& requestBody) {
     try {
@@ -163,4 +156,47 @@ std::pair<int, bj::value> MissionController::handleLaunchAreaScan(const std::str
     } catch (const std::exception& e) {
         return {400, bj::object{{"status", "ERROR"}, {"message", std::string("Invalid payload: ") + e.what()}}};
     }
+}
+
+boost::json::object MissionController::serializeStoredMission(const StoredMissionRecord& record) const {
+    bj::array waypointsArray;
+    for (const auto& wp : record.waypoints) {
+        waypointsArray.push_back(bj::object{
+            {"latitude", wp.latitude},
+            {"longitude", wp.longitude},
+            {"altitude", wp.altitude}
+        });
+    }
+
+    std::int64_t durationSeconds = 0;
+    if (record.completionTime > 0 && record.launchTime > 0) {
+        durationSeconds = static_cast<std::int64_t>(record.completionTime - record.launchTime);
+    }
+
+    return bj::object{
+        {"missionId", record.missionId},
+        {"droneId", record.droneId},
+        {"status", record.status},
+        {"pattern", record.pattern},
+        {"target", waypointsArray.empty()
+            ? bj::object{{"latitude", 0.0}, {"longitude", 0.0}, {"altitude", 0.0}}
+            : bj::object{{"latitude", record.waypoints[0].latitude},
+                         {"longitude", record.waypoints[0].longitude},
+                         {"altitude", record.waypoints[0].altitude}}},
+        {"waypoints", waypointsArray},
+        {"currentWaypointIndex", 0},
+        {"cruiseAltitude", record.cruiseAltitude},
+        {"launchTime", formatLaunchTime(record.launchTime)},
+        {"durationSeconds", durationSeconds}
+    };
+}
+
+std::pair<int, bj::value> MissionController::handleGetMissionHistory() {
+    bj::array missionsArray;
+    // NEW: now reads from the persisted database, not in-memory state —
+    // survives server restarts.
+    for (const auto& record : missionRepository_.getMissionHistory()) {
+        missionsArray.push_back(serializeStoredMission(record));
+    }
+    return {200, bj::object{{"missions", missionsArray}}};
 }

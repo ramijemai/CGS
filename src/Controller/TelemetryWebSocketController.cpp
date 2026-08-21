@@ -15,12 +15,14 @@ TelemetryWebSocketController::TelemetryWebSocketController(TelemetryManager& tel
                                                              RecoveryService& recovery,
                                                              CapacityEngine& capacityEngine,
                                                              const Bunker& bunker,
-                                                             MissionPlanner& missionPlanner)
+                                                             MissionPlanner& missionPlanner,
+                                                             MavlinkFlightController* mavlinkController)
     : telemetryManager_(telemetry)
     , recoveryService_(recovery)
     , capacityEngine_(capacityEngine)
     , bunker_(bunker)
-    , missionPlanner_(missionPlanner) {}
+    , missionPlanner_(missionPlanner)
+    , mavlinkController_(mavlinkController) {}
 
 std::shared_ptr<Drone> TelemetryWebSocketController::findDroneById(const std::string& droneId) const {
     for (const auto& slot : capacityEngine_.getAllSlots()) {
@@ -68,8 +70,19 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
 
         } else if (action == "INITIATE_RECOVERY") {
             std::string droneId = bj::value_to<std::string>(obj.at("droneId"));
-            auto drone = findDroneById(droneId);
 
+            if (mavlinkController_ && mavlinkController_->ownsDrone(droneId)) {
+                bool commanded = mavlinkController_->requestReturnToLaunch();
+                bj::object response{
+                    {"event", "RECOVERY_RESULT"},
+                    {"droneId", droneId},
+                    {"status", commanded ? "RTL_COMMANDED" : "FAILED"}
+                };
+                sendReply(bj::serialize(response));
+                return;
+            }
+
+            auto drone = findDroneById(droneId);
             if (!drone) {
                 bj::object err{
                     {"event", "ERROR"},
@@ -83,11 +96,8 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
             bool ok = recoveryService_.executeRecoveryAndDocking(drone, bunker_);
 
             if (ok) {
-                // Was missing: without this, a re-docked drone stays listed
-                // as active telemetry forever.
                 telemetryManager_.unregisterActiveDrone(droneId);
                 missionPlanner_.completeMission(droneId, "COMPLETED");
-
             }
 
             bj::object response{

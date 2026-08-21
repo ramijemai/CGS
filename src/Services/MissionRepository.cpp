@@ -129,3 +129,68 @@ void MissionRepository::recordMissionCompletion(const std::string& missionId,
 
     std::cout << "[MISSION REPOSITORY] Mission '" << missionId << "' marked " << outcome << ".\n";
 }
+
+std::vector<GpsCoordinate> MissionRepository::loadWaypointsFor(const std::string& missionId) const {
+    // Caller must already hold m_mutex.
+    std::vector<GpsCoordinate> waypoints;
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* query =
+        "SELECT latitude, longitude, altitude FROM mission_waypoints "
+        "WHERE mission_id = ? ORDER BY waypoint_index ASC;";
+
+    if (sqlite3_prepare_v2(m_db, query, -1, &stmt, nullptr) != SQLITE_OK) {
+        std::cerr << "[MISSION REPOSITORY ERROR] Failed to prepare waypoint query: " << sqlite3_errmsg(m_db) << "\n";
+        return waypoints;
+    }
+    sqlite3_bind_text(stmt, 1, missionId.c_str(), -1, SQLITE_TRANSIENT);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        GpsCoordinate wp;
+        wp.latitude = sqlite3_column_double(stmt, 0);
+        wp.longitude = sqlite3_column_double(stmt, 1);
+        wp.altitude = sqlite3_column_double(stmt, 2);
+        waypoints.push_back(wp);
+    }
+    sqlite3_finalize(stmt);
+    return waypoints;
+}
+
+std::vector<StoredMissionRecord> MissionRepository::getMissionHistory() const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    std::vector<StoredMissionRecord> records;
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* query =
+        "SELECT mission_id, drone_id, pattern, cruise_altitude, status, launch_time, completion_time "
+        "FROM missions WHERE status != 'ACTIVE' ORDER BY launch_time DESC;";
+
+    if (sqlite3_prepare_v2(m_db, query, -1, &stmt, nullptr) != SQLITE_OK) {
+        std::cerr << "[MISSION REPOSITORY ERROR] Failed to prepare history query: " << sqlite3_errmsg(m_db) << "\n";
+        return records;
+    }
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        StoredMissionRecord record;
+        record.missionId = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        record.droneId = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        record.pattern = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        record.cruiseAltitude = sqlite3_column_double(stmt, 3);
+        record.status = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4));
+        record.launchTime = static_cast<std::time_t>(sqlite3_column_int64(stmt, 5));
+        record.completionTime = sqlite3_column_type(stmt, 6) != SQLITE_NULL
+            ? static_cast<std::time_t>(sqlite3_column_int64(stmt, 6))
+            : 0;
+        records.push_back(record);
+    }
+    sqlite3_finalize(stmt);
+
+    // N+1 query pattern (one waypoint lookup per mission) — fine at the
+    // scale of a mission-history report; would be worth a JOIN + grouping
+    // if this ever needs to serve thousands of missions per request.
+    for (auto& record : records) {
+        record.waypoints = loadWaypointsFor(record.missionId);
+    }
+
+    return records;
+}

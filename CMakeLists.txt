@@ -17,6 +17,9 @@ find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS json)
 find_package(SQLite3 REQUIRED)
 
+# Find MAVSDK package
+find_package(MAVSDK REQUIRED)
+
 set(SOURCES
     src/Domain/Drone.cpp
     src/Domain/BaySlot.cpp
@@ -28,6 +31,7 @@ set(SOURCES
     src/Services/TelemetryManager.cpp
     src/Controller/MissionController.cpp
     src/Controller/TelemetryWebSocketController.cpp
+    src/Services/MavlinkFlightController.cpp
     src/main.cpp
 )
 
@@ -45,6 +49,7 @@ target_compile_options(BunkerProject PRIVATE
 
 # Link header-only Boost targets, Boost.JSON, SQLite, and system threads
 target_link_libraries(BunkerProject PRIVATE
+    MAVSDK::mavsdk
     Boost::headers
     Boost::json
     SQLite::SQLite3

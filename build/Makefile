@@ -273,6 +273,30 @@ src/Services/CapacityEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.s
 .PHONY : src/Services/CapacityEngine.cpp.s
 
+src/Services/MavlinkFlightController.o: src/Services/MavlinkFlightController.cpp.o
+.PHONY : src/Services/MavlinkFlightController.o
+
+# target to build an object file
+src/Services/MavlinkFlightController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MavlinkFlightController.cpp.o
+.PHONY : src/Services/MavlinkFlightController.cpp.o
+
+src/Services/MavlinkFlightController.i: src/Services/MavlinkFlightController.cpp.i
+.PHONY : src/Services/MavlinkFlightController.i
+
+# target to preprocess a source file
+src/Services/MavlinkFlightController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MavlinkFlightController.cpp.i
+.PHONY : src/Services/MavlinkFlightController.cpp.i
+
+src/Services/MavlinkFlightController.s: src/Services/MavlinkFlightController.cpp.s
+.PHONY : src/Services/MavlinkFlightController.s
+
+# target to generate assembly for a file
+src/Services/MavlinkFlightController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BunkerProject.dir/build.make CMakeFiles/BunkerProject.dir/src/Services/MavlinkFlightController.cpp.s
+.PHONY : src/Services/MavlinkFlightController.cpp.s
+
 src/Services/MissionPlanner.o: src/Services/MissionPlanner.cpp.o
 .PHONY : src/Services/MissionPlanner.o
 
@@ -420,6 +444,9 @@ help:
 	@echo "... src/Services/CapacityEngine.o"
 	@echo "... src/Services/CapacityEngine.i"
 	@echo "... src/Services/CapacityEngine.s"
+	@echo "... src/Services/MavlinkFlightController.o"
+	@echo "... src/Services/MavlinkFlightController.i"
+	@echo "... src/Services/MavlinkFlightController.s"
 	@echo "... src/Services/MissionPlanner.o"
 	@echo "... src/Services/MissionPlanner.i"
 	@echo "... src/Services/MissionPlanner.s"

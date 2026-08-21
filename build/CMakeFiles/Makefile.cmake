@@ -7,6 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/victus/.local/lib/cmake/MAVSDK/MAVSDKConfig.cmake"
+  "/home/victus/.local/lib/cmake/MAVSDK/MAVSDKConfigVersion.cmake"
+  "/home/victus/.local/lib/cmake/MAVSDK/MAVSDKTargets-release.cmake"
+  "/home/victus/.local/lib/cmake/MAVSDK/MAVSDKTargets.cmake"
   "/mnt/c/Users/Victus/Desktop/ProjectC/CGS/CMakeLists.txt"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeSystem.cmake"
@@ -25,6 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/boost_json-1.90.0/libboost_json-variant-static.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake"

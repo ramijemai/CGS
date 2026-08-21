@@ -192,6 +192,413 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Common/MissionPattern.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/RecoveryService.h \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Domain/Bunker.h \
+ /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Services/MavlinkFlightController.h \
+ /usr/include/c++/15/atomic /usr/include/c++/15/thread \
+ /usr/include/c++/15/bits/std_thread.h \
+ /usr/include/c++/15/bits/this_thread_sleep.h \
+ /home/victus/.local/include/mavsdk/mavsdk.hpp \
+ /usr/include/c++/15/optional /usr/include/c++/15/functional \
+ /usr/include/c++/15/bits/std_function.h /usr/include/c++/15/array \
+ /usr/include/c++/15/compare \
+ /home/victus/.local/include/mavsdk/autopilot.hpp \
+ /usr/include/c++/15/sstream /usr/include/c++/15/istream \
+ /usr/include/c++/15/ios /usr/include/c++/15/bits/ios_base.h \
+ /usr/include/c++/15/bits/locale_classes.h \
+ /usr/include/c++/15/bits/locale_classes.tcc \
+ /usr/include/c++/15/system_error /usr/include/c++/15/stdexcept \
+ /usr/include/c++/15/streambuf /usr/include/c++/15/bits/streambuf.tcc \
+ /usr/include/c++/15/bits/basic_ios.h \
+ /usr/include/c++/15/bits/locale_facets.h /usr/include/c++/15/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_base.h \
+ /usr/include/c++/15/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_inline.h \
+ /usr/include/c++/15/bits/locale_facets.tcc \
+ /usr/include/c++/15/bits/basic_ios.tcc /usr/include/c++/15/ostream \
+ /usr/include/c++/15/bits/ostream.h /usr/include/c++/15/bits/ostream.tcc \
+ /usr/include/c++/15/bits/istream.tcc \
+ /usr/include/c++/15/bits/sstream.tcc \
+ /home/victus/.local/include/mavsdk/mavsdk_export.h \
+ /home/victus/.local/include/mavsdk/compatibility_mode.hpp \
+ /home/victus/.local/include/mavsdk/deprecated.hpp \
+ /home/victus/.local/include/mavsdk/handle.hpp \
+ /home/victus/.local/include/mavsdk/system.hpp \
+ /home/victus/.local/include/mavsdk/component_type.hpp \
+ /home/victus/.local/include/mavsdk/vehicle.hpp \
+ /home/victus/.local/include/mavsdk/mavlink_include.hpp \
+ /home/victus/.local/include/mavsdk/mavlink/mavlink_types.h \
+ /usr/lib/gcc/x86_64-linux-gnu/15/include/stdbool.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/version.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/ardupilotmega.h \
+ /home/victus/.local/include/mavsdk/mavlink/protocol.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /home/victus/.local/include/mavsdk/mavlink/mavlink_helpers.h \
+ /home/victus/.local/include/mavsdk/mavlink/checksum.h \
+ /home/victus/.local/include/mavsdk/mavlink/mavlink_conversions.h \
+ /usr/include/c++/15/math.h /usr/include/c++/15/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/15/bits/specfun.h /usr/include/c++/15/tr1/gamma.tcc \
+ /usr/include/c++/15/tr1/special_function_util.h \
+ /usr/include/c++/15/tr1/bessel_function.tcc \
+ /usr/include/c++/15/tr1/beta_function.tcc \
+ /usr/include/c++/15/tr1/ell_integral.tcc \
+ /usr/include/c++/15/tr1/exp_integral.tcc \
+ /usr/include/c++/15/tr1/hypergeometric.tcc \
+ /usr/include/c++/15/tr1/legendre_function.tcc \
+ /usr/include/c++/15/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/15/tr1/poly_hermite.tcc \
+ /usr/include/c++/15/tr1/poly_laguerre.tcc \
+ /usr/include/c++/15/tr1/riemann_zeta.tcc \
+ /home/victus/.local/include/mavsdk/mavlink/mavlink_sha256.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_sensor_offsets.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_set_mag_offsets.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_meminfo.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_ap_adc.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_digicam_configure.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_digicam_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_mount_configure.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_mount_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_mount_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_fence_point.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_fence_fetch_point.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_ahrs.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_simstate.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_hwstatus.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_radio.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_limits_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_wind.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_data16.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_data32.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_data64.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_data96.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_rangefinder.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_airspeed_autocal.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_rally_point.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_rally_fetch_point.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_compassmot_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_ahrs2.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_camera_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_camera_feedback.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_battery2.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_ahrs3.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_autopilot_version_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_remote_log_data_block.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_remote_log_block_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_led_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_mag_cal_progress.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_ekf_status_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_pid_tuning.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_deepstall.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gimbal_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gimbal_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gimbal_torque_cmd_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gopro_heartbeat.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gopro_get_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gopro_get_response.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gopro_set_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_gopro_set_response.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_rpm.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_device_op_read.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_device_op_read_reply.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_device_op_write.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_device_op_write_reply.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_secure_command.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_secure_command_reply.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_adap_tuning.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_vision_position_delta.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_aoa_ssa.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_1_to_4.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_5_to_8.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_9_to_12.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_osd_param_config.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_osd_param_config_reply.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_osd_param_show_config.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_osd_param_show_config_reply.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_obstacle_distance_3d.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_water_depth.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_mcu_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_13_to_16.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_17_to_20.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_21_to_24.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_25_to_28.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_esc_telemetry_29_to_32.h \
+ /home/victus/.local/include/mavsdk/mavlink/ardupilotmega/mavlink_msg_named_value_string.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/common.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_sys_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_system_time.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_ping.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_change_operator_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_change_operator_control_ack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_auth_key.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_link_node_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_mode.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_request_read.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_request_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_value.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_set.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_raw_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_imu.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_raw_imu.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_raw_pressure.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_pressure.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_attitude.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_attitude_quaternion.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_local_position_ned.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_rc_channels_scaled.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_rc_channels_raw.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_servo_output_raw.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_request_partial_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_write_partial_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_item.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_set_current.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_current.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_request_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_count.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_clear_all.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_item_reached.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_ack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_gps_global_origin.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_global_origin.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_map_rc.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_request_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_safety_set_allowed_area.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_safety_allowed_area.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_attitude_quaternion_cov.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_nav_controller_output.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_global_position_int_cov.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_local_position_ned_cov.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_rc_channels.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_request_data_stream.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_data_stream.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_manual_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_rc_channels_override.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mission_item_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_vfr_hud.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_command_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_command_long.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_command_ack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_command_cancel.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_manual_setpoint.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_attitude_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_attitude_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_position_target_local_ned.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_position_target_local_ned.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_position_target_global_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_position_target_global_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_local_position_ned_system_global_offset.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_state.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_controls.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_rc_inputs_raw.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_actuator_controls.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_optical_flow.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_global_vision_position_estimate.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_vision_position_estimate.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_vision_speed_estimate.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_vicon_position_estimate.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_highres_imu.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_optical_flow_rad.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_sensor.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_sim_state.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_radio_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_file_transfer_protocol.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_timesync.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_trigger.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_gps.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_optical_flow.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hil_state_quaternion.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_imu2.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_request_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_entry.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_request_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_erase.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_log_request_end.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_inject_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps2_raw.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_power_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_serial_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_rtk.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps2_rtk.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_imu3.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_data_transmission_handshake.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_encapsulated_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_distance_sensor.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_terrain_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_terrain_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_terrain_check.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_terrain_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_pressure2.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_att_pos_mocap.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_actuator_control_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_actuator_control_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_altitude.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_resource_request.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_scaled_pressure3.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_follow_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_control_system_state.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_battery_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_landing_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_fence_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mag_cal_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_efi_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_estimator_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_wind_cov.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_input.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gps_rtcm_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_high_latency.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_high_latency2.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_vibration.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_home_position.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_set_home_position.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_message_interval.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_extended_sys_state.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_adsb_vehicle.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_collision.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_v2_extension.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_memory_vect.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_debug_vect.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_named_value_float.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_named_value_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_statustext.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_debug.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_setup_signing.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_button_change.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_play_tune.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_settings.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_storage_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_capture_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_image_captured.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_flight_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_mount_orientation.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_logging_data.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_logging_data_acked.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_logging_ack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_video_stream_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_video_stream_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_fov_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_tracking_image_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_tracking_geo_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_camera_thermal_range.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_manager_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_manager_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_manager_set_attitude.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_device_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_device_set_attitude.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_device_attitude_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_autopilot_state_for_gimbal_device.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_manager_set_pitchyaw.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_gimbal_manager_set_manual_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_esc_info.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_esc_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_airspeed.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_wifi_config_ap.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_protocol_version.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_ais_vessel.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_uavcan_node_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_uavcan_node_info.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_ext_request_read.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_ext_request_list.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_ext_value.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_ext_set.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_ext_ack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_obstacle_distance.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_odometry.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_trajectory_representation_waypoints.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_trajectory_representation_bezier.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_cellular_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_isbd_link_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_cellular_config.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_raw_rpm.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_utm_global_position.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_param_error.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_debug_float_array.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_orbit_execution_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_smart_battery_info.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_figure_eight_execution_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_fuel_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_battery_info.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_generator_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_actuator_output_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_time_estimate_to_target.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_tunnel.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_can_frame.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_onboard_computer_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_component_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_component_information_basic.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_component_metadata.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_play_tune_v2.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_supported_tunes.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_event.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_current_event_sequence.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_request_event.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_response_event_error.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_available_modes.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_current_mode.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_available_modes_monitor.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_illuminator_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_canfd_frame.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_can_filter_modify.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_wheel_distance.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_winch_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_basic_id.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_location.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_authentication.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_self_id.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_system.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_operator_id.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_message_pack.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_arm_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_open_drone_id_system_update.h \
+ /home/victus/.local/include/mavsdk/mavlink/common/mavlink_msg_hygrometer_sensor.h \
+ /home/victus/.local/include/mavsdk/mavlink/standard/standard.h \
+ /home/victus/.local/include/mavsdk/mavlink/standard/mavlink_msg_global_position_int.h \
+ /home/victus/.local/include/mavsdk/mavlink/standard/mavlink_msg_autopilot_version.h \
+ /home/victus/.local/include/mavsdk/mavlink/minimal/minimal.h \
+ /home/victus/.local/include/mavsdk/mavlink/minimal/mavlink_msg_heartbeat.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/uAvionix.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_cfg.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_dynamic.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_transceiver_health_report.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_cfg_registration.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_cfg_flightid.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_get.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_control.h \
+ /home/victus/.local/include/mavsdk/mavlink/uAvionix/mavlink_msg_uavionix_adsb_out_status.h \
+ /home/victus/.local/include/mavsdk/mavlink/icarous/icarous.h \
+ /home/victus/.local/include/mavsdk/mavlink/icarous/mavlink_msg_icarous_heartbeat.h \
+ /home/victus/.local/include/mavsdk/mavlink/icarous/mavlink_msg_icarous_kinematic_bands.h \
+ /home/victus/.local/include/mavsdk/mavlink/loweheiser/loweheiser.h \
+ /home/victus/.local/include/mavsdk/mavlink/loweheiser/mavlink_msg_loweheiser_gov_efi.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/cubepilot.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/mavlink_msg_cubepilot_raw_rc.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/mavlink_msg_herelink_video_stream_information.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/mavlink_msg_herelink_telem.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/mavlink_msg_cubepilot_firmware_update_start.h \
+ /home/victus/.local/include/mavsdk/mavlink/cubepilot/mavlink_msg_cubepilot_firmware_update_resp.h \
+ /home/victus/.local/include/mavsdk/mavlink/csAirLink/csAirLink.h \
+ /home/victus/.local/include/mavsdk/mavlink/csAirLink/mavlink_msg_airlink_auth.h \
+ /home/victus/.local/include/mavsdk/mavlink/csAirLink/mavlink_msg_airlink_auth_response.h \
+ /home/victus/.local/include/mavsdk/mavlink/mavlink_get_info.h \
+ /home/victus/.local/include/mavsdk/server_component.hpp \
+ /home/victus/.local/include/mavsdk/connection_result.hpp \
+ /home/victus/.local/include/mavsdk/plugins/action/action.hpp \
+ /usr/include/c++/15/utility /usr/include/c++/15/bits/stl_relops.h \
+ /home/victus/.local/include/mavsdk/plugin_base.hpp \
+ /home/victus/.local/include/mavsdk/plugins/telemetry/telemetry.hpp \
+ /home/victus/.local/include/mavsdk/plugins/mission/mission.hpp \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/MissionController.h \
  /usr/include/boost/json.hpp /usr/include/boost/json/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -219,9 +626,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/exception/exception.hpp \
  /usr/include/boost/assert/source_location.hpp \
  /usr/include/boost/cstdint.hpp /usr/include/c++/15/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/boost/config/workaround.hpp /usr/include/c++/15/utility \
- /usr/include/c++/15/bits/stl_relops.h \
+ /usr/include/boost/config/workaround.hpp \
  /usr/include/boost/json/detail/gdb_printers.hpp \
  /usr/include/boost/json/array.hpp \
  /usr/include/boost/json/detail/array.hpp \
@@ -270,7 +675,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/container/pmr/global_resource.hpp \
  /usr/include/boost/container/detail/auto_link.hpp \
  /usr/include/boost/json/detail/shared_resource.hpp \
- /usr/include/c++/15/atomic \
  /usr/include/boost/json/detail/default_resource.hpp \
  /usr/include/boost/json/is_deallocate_trivial.hpp \
  /usr/include/boost/json/kind.hpp /usr/include/boost/json/string_view.hpp \
@@ -282,7 +686,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/c++/15/bits/stl_heap.h \
  /usr/include/c++/15/bits/uniform_int_dist.h \
  /usr/include/c++/15/pstl/glue_algorithm_defs.h \
- /usr/include/c++/15/stdexcept /usr/include/c++/15/climits \
+ /usr/include/c++/15/climits \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -290,20 +694,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/15/ios \
- /usr/include/c++/15/bits/ios_base.h \
- /usr/include/c++/15/bits/locale_classes.h \
- /usr/include/c++/15/bits/locale_classes.tcc \
- /usr/include/c++/15/system_error /usr/include/c++/15/streambuf \
- /usr/include/c++/15/bits/streambuf.tcc \
- /usr/include/c++/15/bits/basic_ios.h \
- /usr/include/c++/15/bits/locale_facets.h /usr/include/c++/15/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_base.h \
- /usr/include/c++/15/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_inline.h \
- /usr/include/c++/15/bits/locale_facets.tcc \
- /usr/include/c++/15/bits/basic_ios.tcc \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/boost/json/pilfer.hpp /usr/include/boost/system/result.hpp \
  /usr/include/boost/system/errc.hpp \
  /usr/include/boost/system/detail/errc.hpp \
@@ -313,8 +704,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/system/is_error_code_enum.hpp \
  /usr/include/boost/system/detail/error_category.hpp \
  /usr/include/boost/system/detail/config.hpp \
- /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/array /usr/include/c++/15/compare \
  /usr/include/boost/system/detail/error_condition.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/generic_category_message.hpp \
@@ -328,8 +717,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/system/api_config.hpp \
  /usr/include/boost/system/detail/interop_category.hpp \
  /usr/include/boost/system/detail/std_category.hpp \
- /usr/include/c++/15/ostream /usr/include/c++/15/bits/ostream.h \
- /usr/include/c++/15/bits/ostream.tcc \
  /usr/include/boost/system/detail/error_category_impl.hpp \
  /usr/include/boost/system/detail/std_category_impl.hpp \
  /usr/include/boost/system/detail/mutex.hpp \
@@ -378,29 +765,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/json/value_ref.hpp \
  /usr/include/boost/json/detail/impl/array.hpp \
  /usr/include/boost/json/impl/array.hpp \
- /usr/include/boost/json/impl/object.hpp /usr/include/c++/15/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/15/bits/specfun.h /usr/include/c++/15/tr1/gamma.tcc \
- /usr/include/c++/15/tr1/special_function_util.h \
- /usr/include/c++/15/tr1/bessel_function.tcc \
- /usr/include/c++/15/tr1/beta_function.tcc \
- /usr/include/c++/15/tr1/ell_integral.tcc \
- /usr/include/c++/15/tr1/exp_integral.tcc \
- /usr/include/c++/15/tr1/hypergeometric.tcc \
- /usr/include/c++/15/tr1/legendre_function.tcc \
- /usr/include/c++/15/tr1/modified_bessel_func.tcc \
- /usr/include/c++/15/tr1/poly_hermite.tcc \
- /usr/include/c++/15/tr1/poly_laguerre.tcc \
- /usr/include/c++/15/tr1/riemann_zeta.tcc \
+ /usr/include/boost/json/impl/object.hpp \
  /usr/include/boost/json/impl/value.hpp \
  /usr/include/boost/json/impl/value_ref.hpp \
  /usr/include/boost/json/basic_parser.hpp \
@@ -451,8 +816,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/mm_malloc.h \
- /usr/include/c++/15/stdlib.h /usr/include/c++/15/istream \
- /usr/include/c++/15/bits/istream.tcc /usr/include/boost/json/parser.hpp \
+ /usr/include/c++/15/stdlib.h /usr/include/boost/json/parser.hpp \
  /usr/include/boost/json/detail/handler.hpp \
  /usr/include/boost/json/value_stack.hpp \
  /usr/include/boost/json/result_for.hpp \
@@ -468,14 +832,10 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/json/stream_parser.hpp \
  /usr/include/boost/json/value_from.hpp \
  /usr/include/boost/json/detail/value_from.hpp \
- /usr/include/c++/15/optional /usr/include/boost/json/value_to.hpp \
+ /usr/include/boost/json/value_to.hpp \
  /usr/include/boost/json/detail/value_to.hpp \
  /usr/include/boost/json/visit.hpp /usr/include/boost/json/impl/visit.hpp \
  /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/TelemetryWebSocketController.h \
- /mnt/c/Users/Victus/Desktop/ProjectC/CGS/inc/Controller/DroneSimulator.h \
- /usr/include/c++/15/chrono /usr/include/c++/15/iostream \
- /usr/include/c++/15/thread /usr/include/c++/15/bits/std_thread.h \
- /usr/include/c++/15/bits/this_thread_sleep.h \
  /usr/include/boost/asio/ip/tcp.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/version.hpp \
  /usr/include/linux/version.h \
@@ -586,7 +946,7 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/asio/basic_socket.hpp \
  /usr/include/boost/asio/detail/io_object_impl.hpp \
  /usr/include/boost/asio/io_context.hpp \
- /usr/include/boost/asio/detail/chrono.hpp \
+ /usr/include/boost/asio/detail/chrono.hpp /usr/include/c++/15/chrono \
  /usr/include/boost/asio/detail/concurrency_hint.hpp \
  /usr/include/boost/asio/detail/wrapped_handler.hpp \
  /usr/include/boost/asio/detail/bind_handler.hpp \
@@ -754,7 +1114,6 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/asio/ip/impl/address.ipp \
  /usr/include/boost/asio/ip/detail/endpoint.hpp \
  /usr/include/boost/asio/ip/detail/impl/endpoint.ipp \
- /usr/include/c++/15/sstream /usr/include/c++/15/bits/sstream.tcc \
  /usr/include/boost/asio/ip/impl/basic_endpoint.hpp \
  /usr/include/boost/asio/ip/basic_resolver.hpp \
  /usr/include/boost/asio/ip/basic_resolver_iterator.hpp \
@@ -1324,4 +1683,5 @@ CMakeFiles/BunkerProject.dir/src/main.cpp.o: \
  /usr/include/boost/beast/websocket/impl/ping.hpp \
  /usr/include/boost/beast/websocket/impl/read.hpp \
  /usr/include/boost/beast/websocket/impl/stream.hpp \
- /usr/include/boost/beast/websocket/impl/write.hpp
+ /usr/include/boost/beast/websocket/impl/write.hpp \
+ /usr/include/c++/15/iostream

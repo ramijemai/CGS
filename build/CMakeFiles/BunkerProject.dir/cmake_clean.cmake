@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BunkerProject.dir/src/Domain/Drone.cpp.o.d"
   "CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o"
   "CMakeFiles/BunkerProject.dir/src/Services/CapacityEngine.cpp.o.d"
+  "CMakeFiles/BunkerProject.dir/src/Services/MavlinkFlightController.cpp.o"
+  "CMakeFiles/BunkerProject.dir/src/Services/MavlinkFlightController.cpp.o.d"
   "CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o"
   "CMakeFiles/BunkerProject.dir/src/Services/MissionPlanner.cpp.o.d"
   "CMakeFiles/BunkerProject.dir/src/Services/MissionRepository.cpp.o"
