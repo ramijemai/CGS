@@ -1,0 +1,1 @@
+export const BUNKER_LOCATION = { lat: 36.822778, lng: 10.203199 };
