@@ -130,6 +130,28 @@ void MissionRepository::recordMissionCompletion(const std::string& missionId,
     std::cout << "[MISSION REPOSITORY] Mission '" << missionId << "' marked " << outcome << ".\n";
 }
 
+int MissionRepository::getNextMissionNumber() const {
+    std::lock_guard<std::mutex> lock(m_mutex);
+
+    sqlite3_stmt* stmt = nullptr;
+    const char* query =
+        "SELECT COALESCE(MAX(CAST(SUBSTR(mission_id, 3) AS INTEGER)), 899) + 1 "
+        "FROM missions WHERE mission_id GLOB 'M-[0-9]*';";
+
+    if (sqlite3_prepare_v2(m_db, query, -1, &stmt, nullptr) != SQLITE_OK) {
+        std::cerr << "[MISSION REPOSITORY ERROR] Failed to prepare mission number query: "
+                  << sqlite3_errmsg(m_db) << "\n";
+        return 900;
+    }
+
+    int nextNumber = 900;
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        nextNumber = sqlite3_column_int(stmt, 0);
+    }
+    sqlite3_finalize(stmt);
+    return nextNumber;
+}
+
 std::vector<GpsCoordinate> MissionRepository::loadWaypointsFor(const std::string& missionId) const {
     // Caller must already hold m_mutex.
     std::vector<GpsCoordinate> waypoints;

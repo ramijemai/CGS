@@ -17,7 +17,7 @@ public:
     std::shared_ptr<Drone> getDroneIfOccupied() const;
 
     void setHatchState(HatchState state);
-    bool dockDrone(std::shared_ptr<Drone> drone);
+    bool dockDrone(std::shared_ptr<Drone> drone, bool markCharging = true);
     std::shared_ptr<Drone> undockDrone();
     void chargeTick(double amountPercent);
 

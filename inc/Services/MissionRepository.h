@@ -37,6 +37,8 @@ public:
                                   const std::string& outcome,
                                   std::time_t completionTime);
 
+    int getNextMissionNumber() const;
+
     // Returns every mission that has reached a terminal status (i.e. not
     // still ACTIVE), most recent launch first, each with its full
     // waypoint list attached.

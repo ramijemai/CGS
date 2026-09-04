@@ -37,21 +37,29 @@ void BaySlot::setHatchState(HatchState state) {
     m_hatchState = state;
 }
 
-bool BaySlot::dockDrone(std::shared_ptr<Drone> drone) {
+bool BaySlot::dockDrone(std::shared_ptr<Drone> drone, bool markCharging) {
     std::lock_guard<std::mutex> lock(m_mutex);
     if (m_bayState == BayState::Occupied || !drone) return false;
+
     m_drone = drone;
     m_bayState = BayState::Occupied;
-    m_drone->setState(DroneState::Charging);   // Drone has its own separate mutex — no lock-ordering cycle, since Drone never calls back into BaySlot
+
+    if (markCharging || drone->getBatteryLevel() < 20.0) {
+        drone->setState(DroneState::Charging);
+    } else {
+        drone->setState(DroneState::Docked);
+    }
     return true;
 }
 
 std::shared_ptr<Drone> BaySlot::undockDrone() {
     std::lock_guard<std::mutex> lock(m_mutex);
     if (!m_drone) return nullptr;
+
     auto drone = m_drone;
     m_drone.reset();
     m_bayState = BayState::Vacant;
+    drone->setState(DroneState::Idle);
     return drone;
 }
 

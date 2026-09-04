@@ -116,8 +116,8 @@ private:
 
             if (calculateDistance(nextPos, targetPoint) < 1.0) {
                 if (missionSnapshot.isFinalWaypoint()) {
-                    std::cout << "[SIM] Drone " << m_drone->getId() << " reached FINAL waypoint. Completing mission.\n";
-                    m_planner.completeMission(m_drone->getId(), "COMPLETED");
+                    std::cout << "[SIM] Drone " << m_drone->getId() << " reached FINAL waypoint. Awaiting Finish.\n";
+                    m_planner.markFinalWaypointReached(m_drone->getId());
                 } else {
                     std::cout << "[SIM] Drone " << m_drone->getId() << " reached waypoint. Advancing.\n";
                     m_planner.advanceMissionWaypoint(m_drone->getId());

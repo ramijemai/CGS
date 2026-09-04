@@ -103,7 +103,7 @@ void runSession(tcp::socket socket, MissionController& missionCtrl, TelemetryWeb
 
 int main() {
     try {
-        Bunker bunker({36.773442, 10.285913, 0.0});
+        Bunker bunker({36.822778, 10.203199, 0.0});
 
         // Single bay — the fleet is exactly one real, SITL-backed drone.
         // Increase this later if you add more physical/simulated drones.
@@ -111,33 +111,44 @@ int main() {
 
         auto drone = std::make_shared<Drone>("PV-SCOUT-01", 100.0);
         drone->setCurrentLocation(bunker.getGpsLocation());
-        bunkerEngine.getSlot(1)->dockDrone(drone);
+
 
         TelemetryManager telemetryManager;
         MissionRepository missionRepository("cgs_missions.db");
         MissionPlanner missionPlanner(bunkerEngine, telemetryManager, missionRepository);
         RecoveryService recoveryService(bunkerEngine);
 
-        // DroneSimulator has been fully removed — this drone flies only
-        // over real MAVLink against ArduPilot SITL. If SITL isn't
-        // reachable, the drone still exists (dockable, launchable at the
-        // MissionPlanner level) but nothing will move it or feed live
-        // telemetry, since there's no simulator fallback anymore. That's
-        // the intended tradeoff of this simplification, not a bug.
         auto mavlinkController = std::make_unique<MavlinkFlightController>(
             missionPlanner, telemetryManager, recoveryService, bunker, drone
         );
 
         bool sitlConnected = mavlinkController->connect("udpin://0.0.0.0:14540");
-        if (sitlConnected) {
-            mavlinkController->start();
-            std::cout << "[MAIN] '" << drone->getId() << "' is flying on real ArduPilot SITL / MAVLink.\n";
-        } else {
-            std::cerr << "[MAIN] WARNING: SITL not reachable on udpin://0.0.0.0:14540. '"
-                      << drone->getId() << "' will remain docked/undocked at the software "
-                      << "level but will NOT move or produce live telemetry. Start sim_vehicle.py "
-                      << "with --out=udp:127.0.0.1:14540 and restart this server to enable flight.\n";
-        }
+
+if (sitlConnected) {
+    if (mavlinkController->isOnGround()) {
+    bunkerEngine.getSlot(1)->dockDrone(drone, false);
+    std::cout << "[MAIN] '" << drone->getId() << "' confirmed on ground — docked in Bay 1.\n";
+} else {
+        std::cerr << "[MAIN] WARNING: '" << drone->getId()
+                  << "' is already airborne on connect (leftover flight from a previous "
+                  << "session?). Bay 1 left VACANT so recovery can dock it once it actually "
+                  << "lands. Registering it as active telemetry now.\n";
+        telemetryManager.registerActiveDrone(drone, drone->getCurrentLocation());
+
+        // Kick off Phase 2 recovery: RTL + auto-dock through RecoveryService.
+        std::cout << "[MAIN] Triggering RecoveryService::executeRecoveryAndDocking for '"
+                  << drone->getId() << "' on startup.\n";
+        recoveryService.executeRecoveryAndDocking(drone, bunker);
+    }
+    mavlinkController->start();
+} else {
+    // No telemetry available to verify reality against — fall back to the
+    // old blind-dock behavior, since there's nothing else to check.
+    bunkerEngine.getSlot(1)->dockDrone(drone);
+    std::cerr << "[MAIN] WARNING: SITL not reachable on udpin://0.0.0.0:14540. '"
+              << drone->getId() << "' docked without verification — start sim_vehicle.py "
+              << "with --out=udp:127.0.0.1:14540 and restart this server to enable flight.\n";
+}
 
         MissionController missionController(missionPlanner, bunkerEngine, missionRepository);
         TelemetryWebSocketController wsController(

@@ -12,11 +12,11 @@ namespace {
                 return DroneState::ReturningToBunker;
             case FlightMode::Land:
                 return DroneState::Landing;
-            case FlightMode::Stabilized:
             case FlightMode::Hold:
+            case FlightMode::Stabilized:
             case FlightMode::Manual:
             case FlightMode::Ready:
-                return DroneState::Idle; // <-- Map ground modes to Idle!
+                return DroneState::Idle;
             default:
                 return DroneState::InFlight;
         }
@@ -71,6 +71,12 @@ bool MavlinkFlightController::connect(const std::string& connectionUrl) {
     m_telemetry = std::make_unique<mavsdk::Telemetry>(m_system);
     m_mission = std::make_unique<mavsdk::Mission>(m_system);
 
+    m_mission->subscribe_mission_progress([this](mavsdk::Mission::MissionProgress progress) {
+        if (progress.total > 0 && progress.current >= progress.total) {
+            m_missionPlanner.markFinalWaypointReached(m_drone->getId());
+        }
+    });
+
     std::cout << "[MAVLINK] Waiting for vehicle health checks...\n";
     while (m_telemetry && !m_telemetry->health_all_ok()) {
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
@@ -78,6 +84,7 @@ bool MavlinkFlightController::connect(const std::string& connectionUrl) {
     
     std::cout << "[MAVLINK] Vehicle ready for '" << m_drone->getId() << "'.\n";
     m_drone->setState(DroneState::Idle);
+    m_telemetryManager.registerActiveDrone(m_drone, m_drone->getCurrentLocation());
 
     subscribeTelemetry();
     return true;
@@ -104,11 +111,22 @@ void MavlinkFlightController::subscribeTelemetry() {
     });
 
     m_telemetry->subscribe_battery([this](mavsdk::Telemetry::Battery battery) {
-        if (m_drone) m_drone->setBatteryLevel(battery.remaining_percent * 100.0);
+        if (!m_drone) return;
+        const double batteryLevel = battery.remaining_percent;
+        m_drone->setBatteryLevel(batteryLevel);
+        m_telemetryManager.updateDroneBattery(m_drone->getId(), batteryLevel);
     });
 
+    // --- FIX: Check if landed on ground before setting flight mode state ---
     m_telemetry->subscribe_flight_mode([this](mavsdk::Telemetry::FlightMode mode) {
-        if (m_drone) m_drone->setState(mapFlightMode(mode));
+        if (!m_drone) return;
+
+        // If the drone has already completed landing / docked, don't let RTL mode override it back to Returning
+        if (m_drone->getState() == DroneState::Docked || m_drone->getState() == DroneState::Charging) {
+            return;
+        }
+
+        m_drone->setState(mapFlightMode(mode));
     });
 
     m_telemetry->subscribe_velocity_ned([this](mavsdk::Telemetry::VelocityNed v) {
@@ -119,16 +137,25 @@ void MavlinkFlightController::subscribeTelemetry() {
         m_lastHeading.store(heading);
     });
 
+    // --- FIX: Handle landed state transition ---
     m_telemetry->subscribe_landed_state([this](mavsdk::Telemetry::LandedState state) {
-        if (state == mavsdk::Telemetry::LandedState::OnGround && m_awaitingDock.exchange(false)) {
-            finalizeLanding();
+        if (!m_drone) return;
+
+        if (state == mavsdk::Telemetry::LandedState::OnGround) {
+            if (m_awaitingDock.exchange(false)) {
+                finalizeLanding();
+            } else if (m_drone->getState() == DroneState::ReturningToBunker || 
+                       m_drone->getState() == DroneState::Landing) {
+                const bool charging = m_drone->getBatteryLevel() < 20.0;
+                m_drone->setState(charging ? DroneState::Charging : DroneState::Docked);
+            }
         }
     });
 }
 
 void MavlinkFlightController::dispatchRealMission(const ActiveMission& mission) {
     if (!m_mission || !m_action || mission.waypoints.empty()) return;
-
+    m_missionAborted = false;
     mavsdk::Mission::MissionPlan plan;
     for (const auto& wp : mission.waypoints) {
         mavsdk::Mission::MissionItem item{};
@@ -136,7 +163,7 @@ void MavlinkFlightController::dispatchRealMission(const ActiveMission& mission) 
         item.longitude_deg = wp.longitude;
         item.relative_altitude_m = static_cast<float>(mission.cruiseAltitude);
         item.speed_m_s = 5.0f;
-        item.is_fly_through = true;
+        item.is_fly_through = false;
         plan.mission_items.push_back(item);
     }
 
@@ -207,18 +234,61 @@ void MavlinkFlightController::pollLoop() {
 bool MavlinkFlightController::requestReturnToLaunch() {
     if (!m_action) return false;
     if (m_action->return_to_launch() != mavsdk::Action::Result::Success) return false;
+
+    m_missionAborted = true;
+
     m_drone->setState(DroneState::ReturningToBunker);
     m_awaitingDock = true;
     return true;
 }
 
 void MavlinkFlightController::finalizeLanding() {
+    if (!m_drone) return;
+
+    // A landed drone is docked; low-battery drones transition to charging.
+    m_drone->setState(m_drone->getBatteryLevel() < 20.0 ? DroneState::Charging : DroneState::Docked);
+
+    // Register with recovery/bunker service
     if (m_recoveryService.executeRecoveryAndDocking(m_drone, m_bunker)) {
         m_telemetryManager.unregisterActiveDrone(m_drone->getId());
-        m_missionPlanner.completeMission(m_drone->getId(), "COMPLETED");
+
+        // Recalled missions are aborted; completed missions were already
+        // resolved by the explicit Finish action.
+        if (m_missionAborted) {
+            m_missionPlanner.completeMission(m_drone->getId(), "ABORTED");
+            std::cout << "[BUNKER] Drone '" << m_drone->getId() 
+                      << "' docked after RECALL. Mission marked as ABORTED.\n";
+        }
+
+        // Reset flag after handling landing
+        m_missionAborted = false;
+
+        // Start asynchronous charging thread
+        
     }
 }
 
+
+
+
+
 bool MavlinkFlightController::ownsDrone(const std::string& droneId) const {
     return m_drone && m_drone->getId() == droneId;
+}
+
+bool MavlinkFlightController::isOnGround() const {
+    if (!m_telemetry) return false; // no telemetry yet — cannot confirm, treat conservatively
+
+    // landed_state() is a synchronous "latest known value" getter mirroring
+    // subscribe_landed_state() — give the stream a brief moment to resolve
+    // out of its initial Unknown state rather than racing the first packet.
+    auto state = m_telemetry->landed_state();
+    int attempts = 0;
+    while (state == mavsdk::Telemetry::LandedState::Unknown && attempts < 20) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        state = m_telemetry->landed_state();
+        ++attempts;
+    }
+
+    return state == mavsdk::Telemetry::LandedState::OnGround;
 }

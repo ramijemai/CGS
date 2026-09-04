@@ -22,7 +22,16 @@ bool RecoveryService::executeRecoveryAndDocking(std::shared_ptr<Drone> returning
     std::cout << "[RECOVERY] Return target set to bunker GPS ("
               << bunkerLocation.latitude << ", " << bunkerLocation.longitude
               << ", " << bunkerLocation.altitude << "m).\n";
-    
+
+    auto existingSlot = m_capacityEngine.findDroneSlotById(returningDrone->getId());
+    if (existingSlot && existingSlot->isOccupied()) {
+        std::cout << "[RECOVERY] Drone '" << returningDrone->getId()
+                  << "' is already docked in Bay " << existingSlot->getSlotId()
+                  << ". No second bay allocation required.\n";
+        returningDrone->setState(DroneState::Docked);
+        return true;
+    }
+
     returningDrone->setState(DroneState::ReturningToBunker);
 
     auto targetSlot = m_capacityEngine.findVacantSlot();
@@ -39,7 +48,7 @@ bool RecoveryService::executeRecoveryAndDocking(std::shared_ptr<Drone> returning
     returningDrone->setState(DroneState::Landing);
     std::cout << "[RECOVERY] Drone on final approach... Touchdown confirmed.\n";
 
-    targetSlot->dockDrone(returningDrone);
+    targetSlot->dockDrone(returningDrone, false);
     targetSlot->setHatchState(HatchState::Closed);
 
     std::cout << "[RECOVERY SUCCESS] Drone '" << returningDrone->getId() 

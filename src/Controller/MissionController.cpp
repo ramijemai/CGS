@@ -100,6 +100,7 @@ if (mission.completionTime > 0 && mission.launchTime > 0) {
                                {"altitude", mission.target.altitude}}},
         {"waypoints", waypointsArray},
         {"currentWaypointIndex", static_cast<std::int64_t>(mission.currentWaypointIndex)},
+        {"finalWaypointReached", mission.finalWaypointReached},
         {"cruiseAltitude", mission.cruiseAltitude},
         {"launchTime", formatLaunchTime(mission.launchTime)},
         {"durationSeconds", durationSeconds}  

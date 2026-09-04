@@ -8,7 +8,8 @@ MissionPlanner::MissionPlanner(CapacityEngine& capacityEngine,
                                 MissionRepository& missionRepository)
     : m_capacityEngine(capacityEngine)
     , m_telemetryManager(telemetryManager)
-    , m_missionRepository(missionRepository) {}
+    , m_missionRepository(missionRepository)
+    , m_nextMissionId(missionRepository.getNextMissionNumber()) {}
 
 std::shared_ptr<Drone> MissionPlanner::selectAndUndockDrone(const std::string& requestedDroneId) {
     std::shared_ptr<BaySlot> slot;
@@ -169,6 +170,44 @@ bool MissionPlanner::completeMission(const std::string& droneId, const std::stri
     // waiting on mission state.
     m_missionRepository.recordMissionCompletion(missionId, outcome, completionTime);
 
+    return true;
+}
+
+bool MissionPlanner::manuallyFinishMission(const std::string& droneId) {
+    std::string missionId;
+    std::string outcome;
+    std::time_t completionTime = std::time(nullptr);
+
+    {
+        std::lock_guard<std::mutex> lock(m_mutex);
+        auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+            [&](const ActiveMission& mission) {
+                return mission.droneId == droneId && mission.status == "ACTIVE";
+            });
+
+        if (it == m_activeMissions.end()) return false;
+
+        outcome = it->finalWaypointReached ? "COMPLETED" : "ABORTED";
+        it->status = outcome;
+        it->completionTime = completionTime;
+        missionId = it->missionId;
+        m_missionHistory.push_back(*it);
+        m_activeMissions.erase(it);
+    }
+
+    m_missionRepository.recordMissionCompletion(missionId, outcome, completionTime);
+    return true;
+}
+
+bool MissionPlanner::markFinalWaypointReached(const std::string& droneId) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto it = std::find_if(m_activeMissions.begin(), m_activeMissions.end(),
+        [&](const ActiveMission& mission) {
+            return mission.droneId == droneId && mission.status == "ACTIVE";
+        });
+
+    if (it == m_activeMissions.end()) return false;
+    it->finalWaypointReached = true;
     return true;
 }
 

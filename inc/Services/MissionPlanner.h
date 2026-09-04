@@ -17,6 +17,7 @@ struct ActiveMission {
     MissionPattern pattern{MissionPattern::SINGLE_POINT};
     std::vector<GpsCoordinate> waypoints;
     std::size_t currentWaypointIndex{0};
+    bool finalWaypointReached{false};
 
     double cruiseAltitude{0.0};
     std::string status{"ACTIVE"};
@@ -51,6 +52,8 @@ public:
 
     bool advanceMissionWaypoint(const std::string& droneId);
     bool completeMission(const std::string& droneId, const std::string& outcome = "COMPLETED");
+    bool manuallyFinishMission(const std::string& droneId);
+    bool markFinalWaypointReached(const std::string& droneId);
 
     std::vector<ActiveMission> getActiveMissions() const;
     std::vector<ActiveMission> getMissionHistory() const;

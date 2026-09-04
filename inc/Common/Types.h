@@ -12,7 +12,8 @@ enum class DroneState {
     Charging,
     Ready,
     InFlight,
-    ReturningToBunker, // Phase 2
+    ReturningToBunker,
+    Docked, // Phase 2
     Landing,           // Phase 2
     Fault
 };

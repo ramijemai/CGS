@@ -97,13 +97,24 @@ void TelemetryWebSocketController::onMessage(const std::string& rawPayload, Send
 
             if (ok) {
                 telemetryManager_.unregisterActiveDrone(droneId);
-                missionPlanner_.completeMission(droneId, "COMPLETED");
+                missionPlanner_.completeMission(droneId, "ABORTED");
             }
 
             bj::object response{
                 {"event", "RECOVERY_RESULT"},
                 {"droneId", droneId},
                 {"status", ok ? "DOCKED" : "FAILED"}
+            };
+            sendReply(bj::serialize(response));
+
+        } else if (action == "MANUALLY_FINISH_MISSION") {
+            std::string droneId = bj::value_to<std::string>(obj.at("droneId"));
+            bool completed = missionPlanner_.manuallyFinishMission(droneId);
+
+            bj::object response{
+                {"event", "MISSION_FINISH_RESULT"},
+                {"droneId", droneId},
+                {"status", completed ? "COMPLETED" : "ABORTED"}
             };
             sendReply(bj::serialize(response));
 

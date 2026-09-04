@@ -63,6 +63,15 @@ void TelemetryManager::updateDroneTelemetry(const std::string& droneId, const Dr
     }
 }
 
+void TelemetryManager::updateDroneBattery(const std::string& droneId, double batteryLevel) {
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto it = m_activeDrones.find(droneId);
+    if (it != m_activeDrones.end()) {
+        it->second.batteryLevel = batteryLevel;
+        it->second.lastUpdate = std::time(nullptr);
+    }
+}
+
 std::vector<DroneTelemetry> TelemetryManager::getAllActiveDronesTelemetry() const {
     std::lock_guard<std::mutex> lock(m_mutex);
     std::vector<DroneTelemetry> result;

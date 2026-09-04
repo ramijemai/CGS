@@ -40,8 +40,8 @@ void Drone::setState(DroneState state) {
 }
 
 bool Drone::isReadyForMission() const {
-    
     std::lock_guard<std::mutex> lock(m_mutex);
-    return (m_state == DroneState::Ready || m_state == DroneState::Idle || m_state == DroneState::Charging)
-        && m_batteryLevel >= 90.0;
+    const bool batteryReady = m_batteryLevel >= 20.0;
+    return (m_state == DroneState::Ready || m_state == DroneState::Idle || m_state == DroneState::Docked)
+        && batteryReady;
 }

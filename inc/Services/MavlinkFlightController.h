@@ -48,6 +48,7 @@ public:
     bool requestReturnToLaunch();
 
     bool ownsDrone(const std::string& droneId) const;
+    bool isOnGround() const;
 
 private:
     MissionPlanner& m_missionPlanner;
@@ -55,7 +56,7 @@ private:
     RecoveryService& m_recoveryService;
     const Bunker& m_bunker;
     std::shared_ptr<Drone> m_drone;
-
+    bool m_missionAborted{false};
     mavsdk::Mavsdk m_mavsdk;
     std::shared_ptr<mavsdk::System> m_system;
     std::unique_ptr<mavsdk::Action> m_action;

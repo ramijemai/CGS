@@ -59,6 +59,7 @@ public:
 
     // Update telemetry data from drone
     void updateDroneTelemetry(const std::string& droneId, const DroneTelemetry& telemetry);
+    void updateDroneBattery(const std::string& droneId, double batteryLevel);
 
     // Get current telemetry for a drone
     DroneTelemetry* getDroneTelemetry(const std::string& droneId);
